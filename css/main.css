@@ -120,6 +120,9 @@ header nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header nav .logo {
@@ -133,6 +136,7 @@ header nav .logo img {
 header nav ul {
   list-style: none;
   font-size: 1.8rem;
+  display: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,50 +215,41 @@ footer ul li img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   padding: 6.5rem 0;
 }
 
-.home .cta {
+.home .container .cta {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  max-width: 50%;
-  padding-right: 21.7rem;
-  /* 1920x1080 */
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
   color: #FAF8EC;
 }
 
-.home .cta h1 {
+.home .container .cta h1 {
   font-weight: 900;
   font-size: 6.5rem;
   margin-bottom: 1.8rem;
   line-height: 6rem;
 }
 
-.home .cta p {
+.home .container .cta p {
   margin-bottom: 1.7rem;
 }
 
-.home .cta p span {
+.home .container .cta p span {
   font-weight: 700;
 }
 
-.home .catSpace {
+.home .container .catSpace {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  max-width: 50%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
 }
 
 .home .scrollDown {
@@ -628,5 +623,50 @@ footer ul li img {
 
 .contacto label {
   font-size: 1.6rem;
+}
+
+/*  smartphones
+    Android phones
+    landscape iPhone */
+/*  portrait tablets 
+    portrait iPad
+    e-readers (Nook/Kindle)
+    landscape 800x480 phones (Android) */
+/*  tablet
+    landscape iPad
+    lo-res laptops ands desktops */
+/*  big landscape tablets
+    laptops and desktops */
+/* hi-res laptops and desktops */
+@media (min-width: 1281px) {
+  /* ----NAVBAR---- */
+  /* ----HOME---- */
+  .home .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+  .home .container .cta {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 21.7rem;
+    /* 1920x1080 */
+  }
+  .home .container .catSpace {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

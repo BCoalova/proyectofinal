@@ -93,6 +93,7 @@ header {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+        align-items: center;
         .logo {
              padding: .5rem 1.5rem;
             img {
@@ -102,6 +103,7 @@ header {
         ul {
             list-style: none;
             font-size: 1.8rem;
+            display: none;
             display: flex;
             flex-flow: row wrap;
             li {
@@ -152,34 +154,31 @@ footer {
     position: relative;
     .container {
         display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 100vh;
+        flex-flow: column nowrap;
         padding: 6.5rem 0;
-    }
-    .cta {
-        flex: 0 0 50%;
-        max-width: 50%;
-        padding-right: 21.7rem; /* 1920x1080 */
-        color: #FAF8EC;  
-        h1 {
-            font-weight: 900;
-            font-size: 6.5rem;
-            margin-bottom: 1.8rem;
-            line-height: 6rem;
-        }
-        p {
-            margin-bottom: 1.7rem;
-            span {
-                font-weight: 700;
+        .cta {
+            flex: 0 0 100%;
+            max-width: 100%;
+            color: #FAF8EC;  
+            h1 {
+                font-weight: 900;
+                font-size: 6.5rem;
+                margin-bottom: 1.8rem;
+                line-height: 6rem;
+            }
+            p {
+                margin-bottom: 1.7rem;
+                span {
+                    font-weight: 700;
+                }
             }
         }
+        .catSpace {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
     }
-    .catSpace {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
+    
     .scrollDown {
         position: absolute;
         bottom: 4rem;
@@ -431,3 +430,52 @@ footer {
     }
 }
 
+
+
+/*  smartphones
+    Android phones
+    landscape iPhone */
+@media (min-width:480px) {  }
+
+/*  portrait tablets 
+    portrait iPad
+    e-readers (Nook/Kindle)
+    landscape 800x480 phones (Android) */
+@media (min-width:600px) {  }
+
+/*  tablet
+    landscape iPad
+    lo-res laptops ands desktops */
+@media (min-width:801px) {  }
+
+/*  big landscape tablets
+    laptops and desktops */
+@media (min-width:1025px) {
+
+}
+
+/* hi-res laptops and desktops */
+@media (min-width:1281px) {
+    /* ----NAVBAR---- */
+
+    /* ----HOME---- */
+    .home {
+        .container {
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100vh;
+            .cta {
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding-right: 21.7rem; /* 1920x1080 */
+            }
+            .catSpace {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        
+    }
+
+}
