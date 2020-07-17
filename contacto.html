@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carácter | Contacto</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400;1,900&display=swap" rel="stylesheet">
+    <!--FAVICON-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+
+</head>
+<body>
+    <header class="grid">
+        <div class="container">
+            <nav>
+                <a class="logo" href="index.html"><img src="img/logo-caracter.svg" alt="Logo"></a>
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="index.html#trabajos">Trabajos</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="conocenos.html">Conocenos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contacto grid">
+        <div class="container">
+            <div class="formulario">
+                <form action="contacto_submin" method="GET" accept-charset="utf-8">
+                    <div>
+                        <label for="nombre">Nombre:</label><br>
+                        <input type="text" name="nombre" autofocus>
+                    </div>
+                    <div>
+                        <label for="apellido">Apellido:</label><br>
+                        <input type="text" name="apellido">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label><br>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="novedades">¡Quiero recibir novedades!</label>
+                        
+                    </div>
+                    <div>
+                        <label for="comentario">Dejanos un comentario</label><br>
+                        <textarea name="comentarios" cols="30" rows="10"></textarea>
+                    </div>
+                    <input class="btn btnPrimary" type="reset" value="Limpiar">
+                    <input class="btn btnPrimary" type="submit" value="Envíar">
+                </form>
+            </div>
+            <div class="catTakeOff">
+                <img class="imgResponsive" src="img/space-cat-takeoff.svg" alt="">
+            </div>
+        </div>
+    </section>
+    
+    <footer class="grid">
+        <div class="container">
+            <div>
+                <p>info@caracter.com.ar</p>
+                <p>Todos los derechos reservados</p>
+            </div>
+            <ul>
+                <!--sumar redes en href=""-->
+                <li><a target="_blank" href="https://www.facebook.com/"><img src="img/facebook.svg" alt="Facebook Caracter"></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/"><img src="img/instagram.svg" alt="Instagram Caracter"></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
