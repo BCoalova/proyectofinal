@@ -3,7 +3,7 @@ $crema: #FAF8EC;
 $verde: #18A489;
 $negro: #414042;
 
-/* RESETEOS */
+/* DEFAULT */
 * {
     margin: 0;
     padding: 0;
@@ -37,7 +37,7 @@ a {
 .grid {
     width: 100%;
     display: grid;
-    grid-template-columns: 10% 1fr 10%;
+    grid-template-columns: 2rem 1fr 2rem;
     grid-template-areas: "... contenedor ...";
     .container {
         grid-area: contenedor;
@@ -95,21 +95,50 @@ header {
         justify-content: space-between;
         align-items: center;
         .logo {
-             padding: .5rem 1.5rem;
+            padding: .5rem 1.5rem;
             img {
                 width: 163px;
+            }
+        }
+        label {
+            position: relative;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            span {
+                display: inline-block;
+                width: 3.2rem;
+                height: .3rem;
+                background-color: $negro;
+                &:before {
+                    content: ' ';
+                    position: absolute;
+                    top: .3rem;
+                    background-color: $negro;
+                    width: 3.2rem;
+                    height: .3rem;
+                }
+                &:after {
+                    content: ' ';
+                    position: absolute;
+                    top: 1.5rem;
+                    background-color: $negro;
+                    width: 3.2rem;
+                    height: .3rem;
+                }
             }
         }
         ul {
             list-style: none;
             font-size: 1.8rem;
             display: none;
-            display: flex;
-            flex-flow: row wrap;
             li {
                 padding: 2rem 1.5rem;
+                &:hover {
+                    background-color: rgba(65, 64, 66, .2) ;
+                }
                 a {
-                    color: $azul;
+                    color: $negro;
                     text-transform: uppercase;
                     /*&.active {
                         border-bottom: 1px solid $negro;
@@ -178,8 +207,8 @@ footer {
             max-width: 100%;
         }
     }
-    
     .scrollDown {
+        display: none;
         position: absolute;
         bottom: 4rem;
         left: 50%;
@@ -200,7 +229,6 @@ footer {
 .trabajos {
     background-color: $crema;
     text-align: center;
-    height: 100vh;
     padding: 6.5rem 0;
     display: flex;
     flex-flow: column wrap;
@@ -216,16 +244,13 @@ footer {
         justify-content: center;
     }
     .trabajosInner {
-        flex: 0 0 50%;
-        max-width: 50%;
-        padding-bottom: 1.6rem;
-        &.trabajosInnerLeft {
-            text-align: left;
-            padding-left: 1.6rem;
-        }
-        &.trabajosInnerRight {
-            text-align: right;
-            padding-right: .8rem;
+        flex: 0 0 100%;
+        max-width: 100%;
+        img {
+            &:hover {
+                transform: scale(1.02);
+                transition: all .3s ease-in-out;
+            }
         }
     }
 }
@@ -250,7 +275,7 @@ footer {
     background-size: cover;
     text-align: center;
     color: $crema;
-    height: calc(100vh - 4.6rem);
+    
     align-items: center;
     .container {
         padding-top: 6.5rem;
@@ -259,9 +284,8 @@ footer {
         align-items: stretch;
     }
     .serviciosCards {
-        flex: 0 0 33%;
-        max-width: 33%;
-        padding:2.5rem 5rem;
+        flex: 0 0 100%;
+        max-width: 100%;
         img {
             margin-bottom: 1.6rem;
         }
@@ -446,18 +470,97 @@ footer {
 /*  tablet
     landscape iPad
     lo-res laptops ands desktops */
-@media (min-width:801px) {  }
+@media (min-width:801px) {
+
+    /* DEFAULT */
+    .grid {
+        grid-template-columns: 10% 1fr 10%;
+    }
+
+    .servicios {
+        .serviciosCards {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding:2.5rem 5rem;
+        }
+    }
+
+}
+
+    /* SERVICIOS */
+
+    
 
 /*  big landscape tablets
     laptops and desktops */
 @media (min-width:1025px) {
 
+    /* ----DEFAULT---- */
+    .grid {
+        grid-template-columns: 10% 1fr 10%;
+    }
+
+    /* ----HOME---- */
+    .home {
+        .scrollDown {
+            display: block;
+            
+            animation: upAndDown 2s ease-in-out infinite;
+        }
+    }
+    @keyframes upAndDown {
+        0% {
+            transform: translateY(1rem);
+        }
+        50% {
+            transform: translateY(-1rem);
+        }
+        100% {
+            transform: translateY(1rem);
+        }
+    }
+
+
+    /* TRABAJOS */
+    .trabajos {
+        height: 100vh;
+        .trabajosInner {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding-bottom: 1.6rem;
+            &.trabajosInnerLeft {
+                text-align: left;
+                padding-left: 1.6rem;
+            }
+            &.trabajosInnerRight {
+                text-align: right;
+                padding-right: .8rem;
+            }
+        }
+    }
+
+
+
 }
 
 /* hi-res laptops and desktops */
 @media (min-width:1281px) {
+    /* DEFAULT */
+    .grid {
+        grid-template-columns: 10% 1fr 10%;
+    }
     /* ----NAVBAR---- */
-
+    header {
+        nav {
+            label {
+                display: none;
+            }
+            ul {
+                display: flex;
+                flex-flow: row wrap;
+            }
+        }
+    }
     /* ----HOME---- */
     .home {
         .container {
@@ -477,5 +580,17 @@ footer {
         }
         
     }
+
+    /* SERVICIOS */
+
+    .servicios {
+        height: calc(100vh - 4.6rem);
+        .serviciosCards {
+            flex: 0 0 33%;
+            max-width: 33%;
+            padding:2.5rem 5rem;
+        }
+    }
+
 
 }

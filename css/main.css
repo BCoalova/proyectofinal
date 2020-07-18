@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* RESETEOS */
+/* DEFAULT */
 * {
   margin: 0;
   padding: 0;
@@ -43,8 +43,8 @@ a {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10% 1fr 10%;
-      grid-template-columns: 10% 1fr 10%;
+  -ms-grid-columns: 2rem 1fr 2rem;
+      grid-template-columns: 2rem 1fr 2rem;
       grid-template-areas: "... contenedor ...";
 }
 
@@ -133,25 +133,58 @@ header nav .logo img {
   width: 163px;
 }
 
+header nav label {
+  position: relative;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav label span {
+  display: inline-block;
+  width: 3.2rem;
+  height: .3rem;
+  background-color: #414042;
+}
+
+header nav label span:before {
+  content: ' ';
+  position: absolute;
+  top: .3rem;
+  background-color: #414042;
+  width: 3.2rem;
+  height: .3rem;
+}
+
+header nav label span:after {
+  content: ' ';
+  position: absolute;
+  top: 1.5rem;
+  background-color: #414042;
+  width: 3.2rem;
+  height: .3rem;
+}
+
 header nav ul {
   list-style: none;
   font-size: 1.8rem;
   display: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
 }
 
 header nav ul li {
   padding: 2rem 1.5rem;
 }
 
+header nav ul li:hover {
+  background-color: rgba(65, 64, 66, 0.2);
+}
+
 header nav ul li a {
-  color: #082D4B;
+  color: #414042;
   text-transform: uppercase;
   /*&.active {
                         border-bottom: 1px solid $negro;
@@ -253,6 +286,7 @@ footer ul li img {
 }
 
 .home .scrollDown {
+  display: none;
   position: absolute;
   bottom: 4rem;
   left: 50%;
@@ -276,7 +310,6 @@ footer ul li img {
 .trabajos {
   background-color: #FAF8EC;
   text-align: center;
-  height: 100vh;
   padding: 6.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -313,20 +346,16 @@ footer ul li img {
 
 .trabajos .trabajosInner {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  max-width: 50%;
-  padding-bottom: 1.6rem;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
 }
 
-.trabajos .trabajosInner.trabajosInnerLeft {
-  text-align: left;
-  padding-left: 1.6rem;
-}
-
-.trabajos .trabajosInner.trabajosInnerRight {
-  text-align: right;
-  padding-right: .8rem;
+.trabajos .trabajosInner img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 /* Más trabajos */
@@ -356,7 +385,6 @@ footer ul li img {
   background-size: cover;
   text-align: center;
   color: #FAF8EC;
-  height: calc(100vh - 4.6rem);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -376,10 +404,9 @@ footer ul li img {
 
 .servicios .serviciosCards {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 33%;
-          flex: 0 0 33%;
-  max-width: 33%;
-  padding: 2.5rem 5rem;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
 }
 
 .servicios .serviciosCards img {
@@ -635,11 +662,105 @@ footer ul li img {
 /*  tablet
     landscape iPad
     lo-res laptops ands desktops */
+@media (min-width: 801px) {
+  /* DEFAULT */
+  .grid {
+    -ms-grid-columns: 10% 1fr 10%;
+        grid-template-columns: 10% 1fr 10%;
+  }
+  .servicios .serviciosCards {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+    padding: 2.5rem 5rem;
+  }
+}
+
+/* SERVICIOS */
 /*  big landscape tablets
     laptops and desktops */
+@media (min-width: 1025px) {
+  /* ----DEFAULT---- */
+  .grid {
+    -ms-grid-columns: 10% 1fr 10%;
+        grid-template-columns: 10% 1fr 10%;
+  }
+  /* ----HOME---- */
+  .home .scrollDown {
+    display: block;
+    -webkit-animation: upAndDown 2s ease-in-out infinite;
+            animation: upAndDown 2s ease-in-out infinite;
+  }
+  @-webkit-keyframes upAndDown {
+    0% {
+      -webkit-transform: translateY(1rem);
+              transform: translateY(1rem);
+    }
+    50% {
+      -webkit-transform: translateY(-1rem);
+              transform: translateY(-1rem);
+    }
+    100% {
+      -webkit-transform: translateY(1rem);
+              transform: translateY(1rem);
+    }
+  }
+  @keyframes upAndDown {
+    0% {
+      -webkit-transform: translateY(1rem);
+              transform: translateY(1rem);
+    }
+    50% {
+      -webkit-transform: translateY(-1rem);
+              transform: translateY(-1rem);
+    }
+    100% {
+      -webkit-transform: translateY(1rem);
+              transform: translateY(1rem);
+    }
+  }
+  /* TRABAJOS */
+  .trabajos {
+    height: 100vh;
+  }
+  .trabajos .trabajosInner {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+    padding-bottom: 1.6rem;
+  }
+  .trabajos .trabajosInner.trabajosInnerLeft {
+    text-align: left;
+    padding-left: 1.6rem;
+  }
+  .trabajos .trabajosInner.trabajosInnerRight {
+    text-align: right;
+    padding-right: .8rem;
+  }
+}
+
 /* hi-res laptops and desktops */
 @media (min-width: 1281px) {
+  /* DEFAULT */
+  .grid {
+    -ms-grid-columns: 10% 1fr 10%;
+        grid-template-columns: 10% 1fr 10%;
+  }
   /* ----NAVBAR---- */
+  header nav label {
+    display: none;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
   /* ----HOME---- */
   .home .container {
     -webkit-box-orient: horizontal;
@@ -667,6 +788,17 @@ footer ul li img {
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     max-width: 50%;
+  }
+  /* SERVICIOS */
+  .servicios {
+    height: calc(100vh - 4.6rem);
+  }
+  .servicios .serviciosCards {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+    max-width: 33%;
+    padding: 2.5rem 5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
