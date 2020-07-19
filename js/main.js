@@ -107,6 +107,7 @@ $(function(){
         TweenMax.set("#saturno-luna_2_", {
             rotation:0.01,
             z:0.01,
+            repeat:-1,
             transformOrigin:"50% 50%"
           });
         TweenMax.to('#saturno-luna_2_', 100, {
