@@ -100,7 +100,7 @@ header {
                 width: 163px;
             }
         }
-        label {
+        .hamburger {
             position: relative;
             height: 2rem;
             display: flex;
@@ -127,6 +127,7 @@ header {
                     height: .3rem;
                 }
             }
+            
         }
         ul {
             list-style: none;
