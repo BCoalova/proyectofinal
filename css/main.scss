@@ -302,8 +302,8 @@ footer {
     background-color: $crema;
     text-align: center;
     color: $negro;
-    height: calc(100vh - 4.6rem);
     padding-top: 6.5rem;
+    padding-bottom: 3rem;
     align-items: center;
     .container {
         display: flex;
@@ -311,31 +311,23 @@ footer {
         align-items: stretch;
         flex-direction: column;
     }
-    .conocenosSomos {
-        flex: 1 0 40%;
-        max-width: 40%;
-        text-align: left;
-        max-width: 40%;
-        align-self: center;
-        padding-right: 2.5rem;
-        span {
-            font-size: 6.4rem;
-            margin-bottom: 1.8rem;
-            padding-right: 1rem;
-            line-height: 5.8rem;
-        }
-        p {
-            margin-bottom: 1.2rem;
-            line-height: 2.1rem;
-        }
-    }
     .conocenosCards {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
+        justify-content: center;
+        .conocenosSomos {
+            max-width: 100%;
+            flex: 1 0 100%;
+            text-align: left;
+            align-self: center;
+            p {
+                margin-bottom: 1.2rem;
+                line-height: 2.1rem;
+            }
+        }
         .conocenosInner {
-            flex: 0 0 20%;
-            max-width: 20%;
+            
             padding: 1rem 3.5rem;
             img {
                 margin-bottom: 1.6rem;
@@ -357,8 +349,7 @@ footer {
         
     }
     .btnConocenos {
-        flex: 0 0 20%;
-        align-self: flex-end;
+        
         a.btn {
             margin-top: 2.2rem;
         }
@@ -370,18 +361,16 @@ footer {
     background-color: $crema;
     text-align: center;
     color: $negro;
-    height: calc(100vh - 4.6rem);
     padding-top: 8rem;
     justify-content: center;
     align-items: stretch;
     .container {
         display: flex;
         flex-flow: row wrap;
-        
     }
     .equipoInner {
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
+        flex:0 0 100%;
+        max-width: 100%;
         img {
             margin-bottom: 1.6rem;
             width: 25rem;
@@ -459,7 +448,16 @@ footer {
 /*  smartphones
     Android phones
     landscape iPhone */
-@media (min-width:480px) {  }
+@media (min-width:480px) {
+
+    .equipo {
+        .equipoInner {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+}
 
 /*  portrait tablets 
     portrait iPad
@@ -482,6 +480,17 @@ footer {
             flex: 0 0 50%;
             max-width: 50%;
             padding:2.5rem 5rem;
+        }
+    }
+
+    /* CONOCENOS */
+
+    .conocenos {
+        .conocenosCards {
+            .conocenosInner {
+                flex: 0 0 33%;
+                max-width: 33%;
+            }
         }
     }
 
@@ -525,6 +534,15 @@ footer {
                 text-align: right;
                 padding-right: .8rem;
             }
+        }
+    }
+    
+    /* EQUIPO */
+
+    .equipo {
+        .equipoInner {
+            flex: 0 0 50%;
+            max-width: 50%;
         }
     }
 
@@ -581,6 +599,38 @@ footer {
         }
     }
 
+    /* CONOCENOS */
+
+    .conocenos {
+        height: calc(100vh - 4.6rem);
+        padding-bottom: 0;
+        .conocenosCards {
+            .conocenosSomos {
+                flex: 1 0 40%;
+                max-width: 40%;
+                padding-right: 2.5rem;
+            }
+            .conocenosInner {
+                flex: 0 0 20%;
+                max-width: 20%;
+            }
+        }
+        .btnConocenos {
+            flex: 0 0 20%;
+            align-self: flex-end;
+        }
+    }
+
+    /* EQUIPO */ 
+
+    .equipo {
+        height: calc(100vh - 4.6rem);
+        .equipoInner {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+        }
+    }
+
 
 }
 
@@ -598,4 +648,3 @@ footer {
     }
 }
 
-/
