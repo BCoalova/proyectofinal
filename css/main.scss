@@ -581,7 +581,7 @@ footer {
     /* ----NAVBAR---- */
     header {
         nav {
-            label {
+            label.hamburger {
                 display: none;
             }
             ul {
@@ -669,4 +669,3 @@ footer {
         transform: translateY(1rem);
     }
 }
-
