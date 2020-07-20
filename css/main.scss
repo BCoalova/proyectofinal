@@ -144,16 +144,6 @@ header {
             list-style: none;
             font-size: 1.8rem;
             display: none;
-            &#navbar-toggle-cbox:checked ~ .collapse {
-            display: flex;
-            flex-flow: column wrap;
-            flex: 0 0 100%;
-            max-width: 100%;
-            justify-self: center;
-            justify-content: center;
-            align-content: flex-end;
-            text-align: right;
-        }        
             li {
                 padding: 2rem 1.5rem;
                 &:hover {
@@ -531,6 +521,17 @@ footer {
         grid-template-columns: 10% 1fr 10%;
     }
 
+
+    /* NAV */
+
+    header {
+        nav {
+            #navbar-toggle-cbox:checked ~ .collapse {
+                flex-flow: row wrap;
+            }
+        }
+    }
+
     /* ----HOME---- */
     .home {
         .scrollDown {
@@ -581,8 +582,10 @@ footer {
     /* ----NAVBAR---- */
     header {
         nav {
-            label.hamburger {
-                display: none;
+            label {
+                &.hamburger {
+                    display: none;
+                }
             }
             ul {
                 display: flex;
