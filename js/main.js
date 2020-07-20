@@ -25,14 +25,14 @@ xhr.send();
 $(function(){
     var svgContainer = $("#catSpace");
     var svgUrl    = "img/cat-in-space.svg";
-    
+
     $.get(svgUrl)
     .then(injectSvg)
     .always(startAnimation)
-  
+
     function injectSvg(xmlDoc) {
-      var svg = $(xmlDoc).find("svg");
-      svgContainer.append(svg);
+        var svg = $(xmlDoc).find("svg");
+        svgContainer.append(svg);
     }
     function startAnimation() {    
         // GATO ANIMATIONS 
@@ -82,7 +82,7 @@ $(function(){
             rotation:0.01,
             z:0.01,
             transformOrigin:"50% 50%"
-          },0);
+        },0);
         TweenMax.to('#tierra', 270, {
             rotation:"+=360",
         },0);
@@ -95,7 +95,7 @@ $(function(){
             rotation:0.01,
             z:0.01,
             transformOrigin:"50% 50%"
-          });
+        });
         TweenMax.to('#venus', 50, {
             rotation:"+=360"
         },0);
@@ -109,7 +109,7 @@ $(function(){
             z:0.01,
             repeat:-1,
             transformOrigin:"50% 50%"
-          });
+        });
         TweenMax.to('#saturno-luna_2_', 100, {
             rotation:"+=360",
         },0);

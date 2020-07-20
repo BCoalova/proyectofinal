@@ -504,21 +504,10 @@ footer {
     .home {
         .scrollDown {
             display: block;
-            
             animation: upAndDown 2s ease-in-out infinite;
         }
     }
-    @keyframes upAndDown {
-        0% {
-            transform: translateY(1rem);
-        }
-        50% {
-            transform: translateY(-1rem);
-        }
-        100% {
-            transform: translateY(1rem);
-        }
-    }
+    
 
 
     /* TRABAJOS */
@@ -594,3 +583,19 @@ footer {
 
 
 }
+
+/* ANIMACIONES */
+
+@keyframes upAndDown {
+    0% {
+        transform: translateY(1rem);
+    }
+    50% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        transform: translateY(1rem);
+    }
+}
+
+/
