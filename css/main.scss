@@ -129,10 +129,31 @@ header {
             }
             
         }
+        #navbar-toggle-cbox:checked ~ .collapse {
+            display: flex;
+            flex-flow: column wrap;
+            flex: 0 0 100%;
+            max-width: 100%;
+            justify-self: center;
+            justify-content: center;
+            align-content: flex-end;
+            text-align: right;
+            transition: all .3s ease-in;
+        }        
         ul {
             list-style: none;
             font-size: 1.8rem;
             display: none;
+            &#navbar-toggle-cbox:checked ~ .collapse {
+            display: flex;
+            flex-flow: column wrap;
+            flex: 0 0 100%;
+            max-width: 100%;
+            justify-self: center;
+            justify-content: center;
+            align-content: flex-end;
+            text-align: right;
+        }        
             li {
                 padding: 2rem 1.5rem;
                 &:hover {
