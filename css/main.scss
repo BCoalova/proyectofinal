@@ -34,15 +34,6 @@ p {
 a {
     text-decoration: none;
 }
-.grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 2rem 1fr 2rem;
-    grid-template-areas: "... contenedor ...";
-    .container {
-        grid-area: contenedor;
-    }
-}
 img.imgResponsive {
     display: block;
     margin: 0 auto;
@@ -95,66 +86,26 @@ header {
         justify-content: space-between;
         align-items: center;
         .logo {
-            padding: .5rem 1.5rem;
+            
             img {
                 width: 163px;
             }
         }
-        .hamburger {
-            position: relative;
-            height: 2rem;
-            display: flex;
-            align-items: center;
-            span {
-                display: inline-block;
-                width: 3.2rem;
-                height: .3rem;
-                background-color: $negro;
-                &:before {
-                    content: ' ';
-                    position: absolute;
-                    top: .3rem;
-                    background-color: $negro;
-                    width: 3.2rem;
-                    height: .3rem;
-                }
-                &:after {
-                    content: ' ';
-                    position: absolute;
-                    top: 1.5rem;
-                    background-color: $negro;
-                    width: 3.2rem;
-                    height: .3rem;
-                }
-            }
-            
-        }
-        #navbar-toggle-cbox:checked ~ .collapse {
-            display: flex;
-            flex-flow: column wrap;
-            flex: 0 0 100%;
-            max-width: 100%;
-            justify-self: center;
-            justify-content: center;
-            align-content: flex-end;
-            text-align: right;
-            transition: all .3s ease-in;
-        }        
         ul {
-            list-style: none;
             font-size: 1.8rem;
-            display: none;
             li {
                 padding: 2rem 1.5rem;
                 &:hover {
-                    background-color: rgba(65, 64, 66, .2) ;
+                    background-color: rgba(65, 64, 66, .2);
+                    
                 }
                 a {
                     color: $negro;
                     text-transform: uppercase;
-                    /*&.active {
-                        border-bottom: 1px solid $negro;
-                    }*/
+                    &:hover {
+                        text-decoration: none;
+                        color:$negro;
+                    }
                 }
             }
         }
@@ -237,6 +188,17 @@ footer {
         }
     }
 }
+@keyframes upAndDown {
+    0% {
+        transform: translateY(1rem);
+    }
+    50% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        transform: translateY(1rem);
+    }
+}
 /* ----TRABAJOS---- */
 .trabajos {
     background-color: $crema;
@@ -287,7 +249,6 @@ footer {
     background-size: cover;
     text-align: center;
     color: $crema;
-    
     align-items: center;
     .container {
         padding-top: 6.5rem;
@@ -317,6 +278,8 @@ footer {
     padding-top: 6.5rem;
     padding-bottom: 3rem;
     align-items: center;
+    align-items: center;
+    display: flex;
     .container {
         display: flex;
         flex-wrap: wrap;
@@ -339,7 +302,6 @@ footer {
             }
         }
         .conocenosInner {
-            
             padding: 1rem 3.5rem;
             img {
                 margin-bottom: 1.6rem;
@@ -368,12 +330,11 @@ footer {
     }
 }
 /* EQUIPO */
-
 .equipo {
     background-color: $crema;
     text-align: center;
     color: $negro;
-    padding-top: 8rem;
+    padding-top: 10rem;
     justify-content: center;
     align-items: stretch;
     .container {
@@ -381,8 +342,9 @@ footer {
         flex-flow: row wrap;
     }
     .equipoInner {
-        flex:0 0 100%;
+        flex: 0 0 100%;
         max-width: 100%;
+        margin-bottom: 1.6rem;
         img {
             margin-bottom: 1.6rem;
             width: 25rem;
@@ -410,7 +372,7 @@ footer {
     background-color: $azul;
     color: $crema;
     .container {
-        height: calc(100vh - 4.6rem);
+        height: calc(100vh - 5.136rem);
         padding-top: 6.5rem;
         display: flex;
         flex-flow: row wrap;
@@ -454,9 +416,6 @@ footer {
         font-size: 1.6rem;
     }
 }
-
-
-
 /*  smartphones
     Android phones
     landscape iPhone */
@@ -468,25 +427,21 @@ footer {
             max-width: 100%;
         }
     }
-
 }
-
 /*  portrait tablets 
     portrait iPad
     e-readers (Nook/Kindle)
     landscape 800x480 phones (Android) */
-@media (min-width:600px) {  }
+@media (min-width:600px) {
+
+}
 
 /*  tablet
     landscape iPad
     lo-res laptops ands desktops */
-@media (min-width:801px) {
+@media (min-width:768px) {
 
-    /* DEFAULT */
-    .grid {
-        grid-template-columns: 10% 1fr 10%;
-    }
-
+    /* SERVICIOS */
     .servicios {
         .serviciosCards {
             flex: 0 0 50%;
@@ -496,7 +451,6 @@ footer {
     }
 
     /* CONOCENOS */
-
     .conocenos {
         .conocenosCards {
             .conocenosInner {
@@ -505,32 +459,12 @@ footer {
             }
         }
     }
-
 }
 
-    /* SERVICIOS */
-
-    
 
 /*  big landscape tablets
     laptops and desktops */
 @media (min-width:1025px) {
-
-    /* ----DEFAULT---- */
-    .grid {
-        grid-template-columns: 10% 1fr 10%;
-    }
-
-
-    /* NAV */
-
-    header {
-        nav {
-            #navbar-toggle-cbox:checked ~ .collapse {
-                flex-flow: row wrap;
-            }
-        }
-    }
 
     /* ----HOME---- */
     .home {
@@ -539,8 +473,6 @@ footer {
             animation: upAndDown 2s ease-in-out infinite;
         }
     }
-    
-
 
     /* TRABAJOS */
     .trabajos {
@@ -559,40 +491,26 @@ footer {
             }
         }
     }
-    
-    /* EQUIPO */
 
+    /* EQUIPO */
     .equipo {
         .equipoInner {
             flex: 0 0 50%;
             max-width: 50%;
         }
     }
-
-
-
 }
 
+
 /* hi-res laptops and desktops */
-@media (min-width:1281px) {
-    /* DEFAULT */
-    .grid {
-        grid-template-columns: 10% 1fr 10%;
-    }
+@media (min-width: 1200px) {
     /* ----NAVBAR---- */
-    header {
-        nav {
-            label {
-                &.hamburger {
-                    display: none;
-                }
-            }
-            ul {
-                display: flex;
-                flex-flow: row wrap;
-            }
+    .navbar-expand-xl {
+        .navbar-collapse {
+            justify-content: flex-end;
         }
     }
+
     /* ----HOME---- */
     .home {
         .container {
@@ -610,13 +528,11 @@ footer {
                 max-width: 50%;
             }
         }
-        
     }
 
     /* SERVICIOS */
-
     .servicios {
-        height: calc(100vh - 4.6rem);
+        height: calc(100vh - 5.136rem);
         .serviciosCards {
             flex: 0 0 33%;
             max-width: 33%;
@@ -625,9 +541,8 @@ footer {
     }
 
     /* CONOCENOS */
-
     .conocenos {
-        height: calc(100vh - 4.6rem);
+        height: calc(100vh - 5.136rem);
         padding-bottom: 0;
         .conocenosCards {
             .conocenosSomos {
@@ -647,28 +562,14 @@ footer {
     }
 
     /* EQUIPO */ 
-
     .equipo {
-        height: calc(100vh - 4.6rem);
+        height: calc(100vh - 5.136rem);
         .equipoInner {
             flex: 0 0 33.333333%;
             max-width: 33.333333%;
         }
     }
-
-
 }
 
 /* ANIMACIONES */
 
-@keyframes upAndDown {
-    0% {
-        transform: translateY(1rem);
-    }
-    50% {
-        transform: translateY(-1rem);
-    }
-    100% {
-        transform: translateY(1rem);
-    }
-}

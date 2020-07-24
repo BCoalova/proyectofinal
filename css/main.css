@@ -39,21 +39,6 @@ a {
   text-decoration: none;
 }
 
-.grid {
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2rem 1fr 2rem;
-      grid-template-columns: 2rem 1fr 2rem;
-      grid-template-areas: "... contenedor ...";
-}
-
-.grid .container {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: contenedor;
-}
-
 img.imgResponsive {
   display: block;
   margin: 0 auto;
@@ -125,77 +110,12 @@ header nav {
           align-items: center;
 }
 
-header nav .logo {
-  padding: .5rem 1.5rem;
-}
-
 header nav .logo img {
   width: 163px;
 }
 
-header nav .hamburger {
-  position: relative;
-  height: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header nav .hamburger span {
-  display: inline-block;
-  width: 3.2rem;
-  height: .3rem;
-  background-color: #414042;
-}
-
-header nav .hamburger span:before {
-  content: ' ';
-  position: absolute;
-  top: .3rem;
-  background-color: #414042;
-  width: 3.2rem;
-  height: .3rem;
-}
-
-header nav .hamburger span:after {
-  content: ' ';
-  position: absolute;
-  top: 1.5rem;
-  background-color: #414042;
-  width: 3.2rem;
-  height: .3rem;
-}
-
-header nav #navbar-toggle-cbox:checked ~ .collapse {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
-  justify-self: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
-  text-align: right;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
-}
-
 header nav ul {
-  list-style: none;
   font-size: 1.8rem;
-  display: none;
 }
 
 header nav ul li {
@@ -209,9 +129,11 @@ header nav ul li:hover {
 header nav ul li a {
   color: #414042;
   text-transform: uppercase;
-  /*&.active {
-                        border-bottom: 1px solid $negro;
-                    }*/
+}
+
+header nav ul li a:hover {
+  text-decoration: none;
+  color: #414042;
 }
 
 /* ----FOOTER---- */
@@ -327,6 +249,36 @@ footer ul li img {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
   border-color: #18A489;
+}
+
+@-webkit-keyframes upAndDown {
+  0% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+  50% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+}
+
+@keyframes upAndDown {
+  0% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+  50% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
 }
 
 /* ----TRABAJOS---- */
@@ -454,6 +406,10 @@ footer ul li img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .conocenos .container {
@@ -535,7 +491,7 @@ footer ul li img {
   background-color: #FAF8EC;
   text-align: center;
   color: #414042;
-  padding-top: 8rem;
+  padding-top: 10rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -559,6 +515,7 @@ footer ul li img {
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   max-width: 100%;
+  margin-bottom: 1.6rem;
 }
 
 .equipo .equipoInner img {
@@ -594,7 +551,7 @@ footer ul li img {
 }
 
 .contacto .container {
-  height: calc(100vh - 4.6rem);
+  height: calc(100vh - 5.136rem);
   padding-top: 6.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -675,12 +632,8 @@ footer ul li img {
 /*  tablet
     landscape iPad
     lo-res laptops ands desktops */
-@media (min-width: 801px) {
-  /* DEFAULT */
-  .grid {
-    -ms-grid-columns: 10% 1fr 10%;
-        grid-template-columns: 10% 1fr 10%;
-  }
+@media (min-width: 768px) {
+  /* SERVICIOS */
   .servicios .serviciosCards {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
@@ -697,22 +650,9 @@ footer ul li img {
   }
 }
 
-/* SERVICIOS */
 /*  big landscape tablets
     laptops and desktops */
 @media (min-width: 1025px) {
-  /* ----DEFAULT---- */
-  .grid {
-    -ms-grid-columns: 10% 1fr 10%;
-        grid-template-columns: 10% 1fr 10%;
-  }
-  /* NAV */
-  header nav #navbar-toggle-cbox:checked ~ .collapse {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-  }
   /* ----HOME---- */
   .home .scrollDown {
     display: block;
@@ -748,24 +688,12 @@ footer ul li img {
 }
 
 /* hi-res laptops and desktops */
-@media (min-width: 1281px) {
-  /* DEFAULT */
-  .grid {
-    -ms-grid-columns: 10% 1fr 10%;
-        grid-template-columns: 10% 1fr 10%;
-  }
+@media (min-width: 1200px) {
   /* ----NAVBAR---- */
-  header nav label.hamburger {
-    display: none;
-  }
-  header nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+  .navbar-expand-xl .navbar-collapse {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   /* ----HOME---- */
   .home .container {
@@ -797,7 +725,7 @@ footer ul li img {
   }
   /* SERVICIOS */
   .servicios {
-    height: calc(100vh - 4.6rem);
+    height: calc(100vh - 5.136rem);
   }
   .servicios .serviciosCards {
     -webkit-box-flex: 0;
@@ -808,7 +736,7 @@ footer ul li img {
   }
   /* CONOCENOS */
   .conocenos {
-    height: calc(100vh - 4.6rem);
+    height: calc(100vh - 5.136rem);
     padding-bottom: 0;
   }
   .conocenos .conocenosCards .conocenosSomos {
@@ -833,7 +761,7 @@ footer ul li img {
   }
   /* EQUIPO */
   .equipo {
-    height: calc(100vh - 4.6rem);
+    height: calc(100vh - 5.136rem);
   }
   .equipo .equipoInner {
     -webkit-box-flex: 0;
@@ -844,32 +772,4 @@ footer ul li img {
 }
 
 /* ANIMACIONES */
-@-webkit-keyframes upAndDown {
-  0% {
-    -webkit-transform: translateY(1rem);
-            transform: translateY(1rem);
-  }
-  50% {
-    -webkit-transform: translateY(-1rem);
-            transform: translateY(-1rem);
-  }
-  100% {
-    -webkit-transform: translateY(1rem);
-            transform: translateY(1rem);
-  }
-}
-@keyframes upAndDown {
-  0% {
-    -webkit-transform: translateY(1rem);
-            transform: translateY(1rem);
-  }
-  50% {
-    -webkit-transform: translateY(-1rem);
-            transform: translateY(-1rem);
-  }
-  100% {
-    -webkit-transform: translateY(1rem);
-            transform: translateY(1rem);
-  }
-}
 /*# sourceMappingURL=main.css.map */
