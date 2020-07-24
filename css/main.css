@@ -324,6 +324,7 @@ footer ul li img {
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   max-width: 100%;
+  padding-bottom: 1.6rem;
 }
 
 .trabajos .trabajosInner img:hover {
@@ -363,6 +364,9 @@ footer ul li img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .servicios .container {
@@ -668,7 +672,6 @@ footer ul li img {
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     max-width: 50%;
-    padding-bottom: 1.6rem;
   }
   .trabajos .trabajosInner.trabajosInnerLeft {
     text-align: left;
@@ -736,7 +739,6 @@ footer ul li img {
   }
   /* CONOCENOS */
   .conocenos {
-    height: calc(100vh - 5.136rem);
     padding-bottom: 0;
   }
   .conocenos .conocenosCards .conocenosSomos {

@@ -220,6 +220,7 @@ footer {
     .trabajosInner {
         flex: 0 0 100%;
         max-width: 100%;
+        padding-bottom: 1.6rem;
         img {
             &:hover {
                 transform: scale(1.02);
@@ -250,6 +251,7 @@ footer {
     text-align: center;
     color: $crema;
     align-items: center;
+    display: flex;
     .container {
         padding-top: 6.5rem;
         display: flex;
@@ -480,7 +482,7 @@ footer {
         .trabajosInner {
             flex: 0 0 50%;
             max-width: 50%;
-            padding-bottom: 1.6rem;
+            
             &.trabajosInnerLeft {
                 text-align: left;
                 padding-left: 1.6rem;
@@ -542,7 +544,6 @@ footer {
 
     /* CONOCENOS */
     .conocenos {
-        height: calc(100vh - 5.136rem);
         padding-bottom: 0;
         .conocenosCards {
             .conocenosSomos {
