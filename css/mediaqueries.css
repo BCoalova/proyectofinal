@@ -1,0 +1,187 @@
+/*  smartphones
+    Android phones
+    landscape iPhone */
+@media (min-width: 480px) {
+  .equipo .equipoInner {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/*  portrait tablets 
+        portrait iPad
+        e-readers (Nook/Kindle)
+        landscape 800x480 phones (Android) */
+/*  tablet
+        landscape iPad
+        lo-res laptops ands desktops */
+@media (min-width: 801px) {
+  /* DEFAULT */
+  .grid {
+    -ms-grid-columns: 10% 1fr 10%;
+        grid-template-columns: 10% 1fr 10%;
+  }
+  .servicios .serviciosCards {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+    padding: 2.5rem 5rem;
+  }
+  /* CONOCENOS */
+  .conocenos .conocenosCards .conocenosInner {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+    max-width: 33%;
+  }
+}
+
+/* SERVICIOS */
+/*  big landscape tablets
+        laptops and desktops */
+@media (min-width: 1025px) {
+  /* ----DEFAULT---- */
+  .grid {
+    -ms-grid-columns: 10% 1fr 10%;
+        grid-template-columns: 10% 1fr 10%;
+  }
+  /* NAV */
+  header nav #navbar-toggle-cbox:checked ~ .collapse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  /* ----HOME---- */
+  .home .scrollDown {
+    display: block;
+    -webkit-animation: upAndDown 2s ease-in-out infinite;
+            animation: upAndDown 2s ease-in-out infinite;
+  }
+  /* TRABAJOS */
+  .trabajos {
+    height: 100vh;
+  }
+  .trabajos .trabajosInner {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+    padding-bottom: 1.6rem;
+  }
+  .trabajos .trabajosInner.trabajosInnerLeft {
+    text-align: left;
+    padding-left: 1.6rem;
+  }
+  .trabajos .trabajosInner.trabajosInnerRight {
+    text-align: right;
+    padding-right: .8rem;
+  }
+  /* EQUIPO */
+  .equipo .equipoInner {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* hi-res laptops and desktops */
+@media (min-width: 1281px) {
+  /* DEFAULT */
+  .grid {
+    -ms-grid-columns: 10% 1fr 10%;
+        grid-template-columns: 10% 1fr 10%;
+  }
+  /* ----NAVBAR---- */
+  header nav label.hamburger {
+    display: none;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  /* ----HOME---- */
+  .home .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+  .home .container .cta {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 21.7rem;
+    /* 1920x1080 */
+  }
+  .home .container .catSpace {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+  /* SERVICIOS */
+  .servicios {
+    height: calc(100vh - 4.6rem);
+  }
+  .servicios .serviciosCards {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+    max-width: 33%;
+    padding: 2.5rem 5rem;
+  }
+  /* CONOCENOS */
+  .conocenos {
+    height: calc(100vh - 4.6rem);
+    padding-bottom: 0;
+  }
+  .conocenos .conocenosCards .conocenosSomos {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 40%;
+            flex: 1 0 40%;
+    max-width: 40%;
+    padding-right: 2.5rem;
+  }
+  .conocenos .conocenosCards .conocenosInner {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .conocenos .btnConocenos {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  /* EQUIPO */
+  .equipo {
+    height: calc(100vh - 4.6rem);
+  }
+  .equipo .equipoInner {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+            flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+/*# sourceMappingURL=mediaqueries.css.map */
