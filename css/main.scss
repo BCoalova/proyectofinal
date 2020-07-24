@@ -545,11 +545,15 @@ footer {
     /* CONOCENOS */
     .conocenos {
         padding-bottom: 0;
+        height: calc(100vh - 5.136rem);
         .conocenosCards {
             .conocenosSomos {
                 flex: 1 0 40%;
                 max-width: 40%;
                 padding-right: 2.5rem;
+                h1 {
+                    font-size: 6.5rem;
+                }
             }
             .conocenosInner {
                 flex: 0 0 20%;
