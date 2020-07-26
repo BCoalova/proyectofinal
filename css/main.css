@@ -464,12 +464,13 @@ footer ul li img {
 }
 
 .conocenos .btnConocenos {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .conocenos .btnConocenos a.btn {
@@ -559,13 +560,14 @@ footer ul li img {
 .contacto .row .formulario form input[type="email"],
 .contacto .row .formulario form textarea {
   display: block;
-  width: 80%;
+  width: 100%;
   margin-bottom: 1rem;
   background-color: transparent;
   border: 0.1rem solid #18A489;
   outline: none;
   padding: .3rem;
   color: #FAF8EC;
+  font-size: 1.4rem;
 }
 
 .contacto .row .formulario form input[type="text"]:focus,
@@ -600,6 +602,12 @@ footer ul li img {
   /* CONOCENOS */
   .conocenos {
     min-height: calc(100vh - 5.136rem);
+  }
+  .conocenos .btnConocenos {
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 

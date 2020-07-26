@@ -316,8 +316,9 @@ footer {
         
     }
     .btnConocenos {
+        width: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         a.btn {
             margin-top: 2.2rem;
         }
@@ -378,13 +379,14 @@ footer {
                 input[type="email"],
                 textarea {
                     display: block;
-                    width:80%;
+                    width:100%;
                     margin-bottom: 1rem;
                     background-color: transparent;
                     border: .1rem solid $verde;
                     outline: none;
                     padding: .3rem;
                     color:$crema;
+                    font-size: 1.4rem;
                     &:focus {
                         background-color: $verde;
                     }
@@ -405,12 +407,9 @@ footer {
 }
 
 @media (min-width:576px) {
-
+    
 }
 
-@media (min-width:768px) {
-
-}
 
 
 @media (min-width:768px) {
@@ -429,6 +428,10 @@ footer {
     /* CONOCENOS */
     .conocenos {
         min-height: calc(100vh - 5.136rem);
+        .btnConocenos {
+            width: 100%;
+            justify-content: flex-end;
+        }
     }
 }
 
