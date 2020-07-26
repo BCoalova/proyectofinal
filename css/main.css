@@ -190,21 +190,18 @@ footer ul li img {
 }
 
 .home .container {
+  padding: 7.7rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  padding: 6.5rem 0;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .home .container .cta {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   color: #FAF8EC;
 }
 
@@ -224,10 +221,9 @@ footer ul li img {
 }
 
 .home .container .catSpace {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .home .scrollDown {
@@ -320,10 +316,6 @@ footer ul li img {
 }
 
 .trabajos .trabajosInner {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
   padding-bottom: 1.6rem;
 }
 
@@ -376,16 +368,9 @@ footer ul li img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
-.servicios .serviciosCards {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .servicios .serviciosCards img {
@@ -425,10 +410,6 @@ footer ul li img {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .conocenos .conocenosCards {
@@ -446,10 +427,6 @@ footer ul li img {
 }
 
 .conocenos .conocenosCards .conocenosSomos {
-  max-width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
   text-align: left;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -486,6 +463,15 @@ footer ul li img {
   margin: 0 .8rem;
 }
 
+.conocenos .btnConocenos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .conocenos .btnConocenos a.btn {
   margin-top: 2.2rem;
 }
@@ -515,10 +501,6 @@ footer ul li img {
 }
 
 .equipo .equipoInner {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
   margin-bottom: 1.6rem;
 }
 
@@ -552,41 +534,30 @@ footer ul li img {
 .contacto {
   background-color: #082D4B;
   color: #FAF8EC;
-}
-
-.contacto .container {
-  height: calc(100vh - 5.136rem);
-  padding-top: 6.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
 }
 
-.contacto .container .formulario, .contacto .container .catTakeOff {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  max-width: 50%;
+.contacto .row {
+  padding-top: 7.7rem;
+  min-height: calc(100vh - 5.136rem);
 }
 
-.contacto .container .formulario {
+.contacto .row .formulario {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.contacto .container .formulario form label {
+.contacto .row .formulario form label {
   display: inline-block;
   margin-bottom: 1rem;
 }
 
-.contacto .container .formulario form input[type="text"],
-.contacto .container .formulario form input[type="email"],
-.contacto .container .formulario form textarea {
+.contacto .row .formulario form input[type="text"],
+.contacto .row .formulario form input[type="email"],
+.contacto .row .formulario form textarea {
   display: block;
   width: 80%;
   margin-bottom: 1rem;
@@ -597,18 +568,18 @@ footer ul li img {
   color: #FAF8EC;
 }
 
-.contacto .container .formulario form input[type="text"]:focus,
-.contacto .container .formulario form input[type="email"]:focus,
-.contacto .container .formulario form textarea:focus {
+.contacto .row .formulario form input[type="text"]:focus,
+.contacto .row .formulario form input[type="email"]:focus,
+.contacto .row .formulario form textarea:focus {
   background-color: #18A489;
 }
 
-.contacto .container .formulario form input[type="text"],
-.contacto .container .formulario form input[type="email"] {
+.contacto .row .formulario form input[type="text"],
+.contacto .row .formulario form input[type="email"] {
   height: 2.6rem;
 }
 
-.contacto .container .catTakeOff {
+.contacto .row .catTakeOff {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -617,47 +588,26 @@ footer ul li img {
   font-size: 1.6rem;
 }
 
-/*  smartphones
-    Android phones
-    landscape iPhone */
-@media (min-width: 480px) {
-  .equipo .equipoInner {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-/*  portrait tablets 
-    portrait iPad
-    e-readers (Nook/Kindle)
-    landscape 800x480 phones (Android) */
-/*  tablet
-    landscape iPad
-    lo-res laptops ands desktops */
 @media (min-width: 768px) {
+  /* HOME */
+  .home .container {
+    min-height: 100vh;
+  }
   /* SERVICIOS */
   .servicios .serviciosCards {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
     padding: 2.5rem 5rem;
   }
   /* CONOCENOS */
-  .conocenos .conocenosCards .conocenosInner {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33%;
-            flex: 0 0 33%;
-    max-width: 33%;
+  .conocenos {
+    min-height: calc(100vh - 5.136rem);
   }
 }
 
-/*  big landscape tablets
-    laptops and desktops */
-@media (min-width: 1025px) {
+@media (min-width: 992px) {
   /* ----HOME---- */
+  .home .container {
+    min-height: 100vh;
+  }
   .home .scrollDown {
     display: block;
     -webkit-animation: upAndDown 2s ease-in-out infinite;
@@ -666,27 +616,6 @@ footer ul li img {
   /* TRABAJOS */
   .trabajos {
     height: 100vh;
-  }
-  .trabajos .trabajosInner {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .trabajos .trabajosInner.trabajosInnerLeft {
-    text-align: left;
-    padding-left: 1.6rem;
-  }
-  .trabajos .trabajosInner.trabajosInnerRight {
-    text-align: right;
-    padding-right: .8rem;
-  }
-  /* EQUIPO */
-  .equipo .equipoInner {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
   }
 }
 
@@ -710,7 +639,7 @@ footer ul li img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100vh;
+    min-height: 100vh;
   }
   .home .container .cta {
     -webkit-box-flex: 0;
@@ -728,54 +657,26 @@ footer ul li img {
   }
   /* SERVICIOS */
   .servicios {
-    height: calc(100vh - 5.136rem);
+    min-height: calc(100vh - 5.136rem);
   }
   .servicios .serviciosCards {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33%;
-            flex: 0 0 33%;
-    max-width: 33%;
     padding: 2.5rem 5rem;
   }
   /* CONOCENOS */
   .conocenos {
     padding-bottom: 0;
-    height: calc(100vh - 5.136rem);
+    min-height: calc(100vh - 5.136rem);
   }
   .conocenos .conocenosCards .conocenosSomos {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 40%;
-            flex: 1 0 40%;
-    max-width: 40%;
     padding-right: 2.5rem;
   }
   .conocenos .conocenosCards .conocenosSomos h1 {
     font-size: 6.5rem;
   }
-  .conocenos .conocenosCards .conocenosInner {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
-    max-width: 20%;
-  }
-  .conocenos .btnConocenos {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-  }
   /* EQUIPO */
   .equipo {
-    height: calc(100vh - 5.136rem);
-  }
-  .equipo .equipoInner {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.333333%;
-            flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    min-height: calc(100vh - 5.136rem);
+    max-height: auto;
   }
 }
-
-/* ANIMACIONES */
 /*# sourceMappingURL=main.css.map */

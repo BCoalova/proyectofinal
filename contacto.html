@@ -38,35 +38,37 @@
 
     <section class="contacto">
         <div class="container">
-            <div class="formulario">
-                <form action="contacto_submin" method="GET" accept-charset="utf-8">
-                    <div>
-                        <label for="nombre">Nombre:</label><br>
-                        <input type="text" name="nombre" autofocus>
-                    </div>
-                    <div>
-                        <label for="apellido">Apellido:</label><br>
-                        <input type="text" name="apellido">
-                    </div>
-                    <div>
-                        <label for="email">Email:</label><br>
-                        <input type="email" name="email" required>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="novedades">¡Quiero recibir novedades!</label>
-                        
-                    </div>
-                    <div>
-                        <label for="comentario">Dejanos un comentario</label><br>
-                        <textarea name="comentarios" cols="30" rows="10"></textarea>
-                    </div>
-                    <input class="btn btnPrimary" type="reset" value="Limpiar">
-                    <input class="btn btnPrimary" type="submit" value="Envíar">
-                </form>
-            </div>
-            <div class="catTakeOff">
-                <img class="imgResponsive" src="img/space-cat-takeoff.svg" alt="">
+            <div class="row">
+                <div class="formulario col-md-6">
+                    <form action="contacto_submin" method="GET" accept-charset="utf-8">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label><br>
+                            <input class="form-control" type="text" name="nombre" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido:</label><br>
+                            <input class="form-control" type="text" name="apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label><br>
+                            <input class="form-control" type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox">
+                            <label for="novedades">¡Quiero recibir novedades!</label>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="comentario">Dejanos un comentario</label><br>
+                            <textarea name="comentarios" cols="30" rows="10"></textarea>
+                        </div>
+                        <input class="btn btnPrimary" type="reset" value="Limpiar">
+                        <input class="btn btnPrimary" type="submit" value="Envíar">
+                    </form>
+                </div>
+                <div class="catTakeOff col-md-6">
+                    <img class="imgResponsive" src="img/space-cat-takeoff.svg" alt="">
+                </div>
             </div>
         </div>
     </section>
