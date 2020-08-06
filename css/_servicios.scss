@@ -1,0 +1,29 @@
+/* ----SERVICIOS---- */
+.servicios {
+    background-image: url(../img/background-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: $crema;
+    align-items: center;
+    display: flex;
+    .container {
+        padding-top: 6.5rem;
+        padding-bottom: 6.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .serviciosCards {
+        padding: 1.6rem 2rem;
+        img {
+            margin-bottom: 1.6rem;
+        }
+        h3 {
+            margin-bottom: 1.8rem;
+        }
+        p {
+            margin-bottom: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+/* ----NAVBAR---- */
+header {
+    background-color: $crema;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0.3px 0.1px 4px rgba(178,178,178,0.4);
+    nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            img {
+                width: 163px;
+            }
+        }
+        ul.navbar-nav {
+            font-size: 1.8rem;
+            li.nav-item {
+                a.nav-link {
+                    padding: 1.5rem 1.8rem;
+                    color: $negro;
+                    text-transform: uppercase;
+                    &:hover {
+                        text-decoration: none;
+                        color:$negro;
+                    }
+                }
+            }
+        }
+    }
+}

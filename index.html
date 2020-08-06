@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body class="bootstrapOverwrites">
     <header>
         <div class="container">
             <nav class="navbar navbar-expand-xl navbar-light">
@@ -27,11 +27,28 @@
                 </button>
                 <div class="navbar-collapse navbar-collapse collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav" id="">
-                        <li><a href="#home" class="active">Inicio</a></li>
-                        <li><a href="#trabajos">Trabajos</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="conocenos.html">Conocenos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#home" class="active">Inicio</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Trabajos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#trabajos">Últimos Trabajos</a>
+                                <a class="dropdown-item" href="mastrabajos.html">Portfolio</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Conocenos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <a class="dropdown-item" href="conocenos.html">Sobre nosotros</a>
+                                <a class="dropdown-item" href="equipo.html">Equipo</a>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
@@ -42,13 +59,13 @@
     <section id="home" class="home">
             <div class="container">
                 <div class="row">
-                    <div class="cta col-lg-6 col-md-6 col-sm-12">
-                        <h1>Despegá tu Marca</h1>
-                        <p>En <span>Carácter</span> creemos en la importancia de una buena estrategia de marca que logre alcanzar los diferentes objetivos de nuestros clientes.</p>
+                    <div class="cta col-lg-5 col-md-5 col-sm-12">
+                        <h1 class="cta__title">Despegá tu Marca</h1>
+                        <p class="cta__paragraph">En <span>Carácter</span> creemos en la importancia de una buena estrategia de marca que logre alcanzar los diferentes objetivos de nuestros clientes.</p>
                         <a class="btn btnPrimary" href="#trabajos">Empecemos</a>
                     </div> 
                     <div class="catSpace col-lg-6 col-md-6 col-sm-12" id="catSpace">
-                        <img class="imgResponsive" src="img/cat-in-space.svg" alt="" title="Gato en el espacio">
+                        <!-- <img class="imgResponsive" src="img/cat-in-space.svg" alt="" title="Gato en el espacio"> -->
                     </div>
                 </div>
             </div>
@@ -60,22 +77,74 @@
     <section id="trabajos" class="trabajos">
             <div class="container">
                 <div class="row justify-content-md-center">
-                    <div class="trabajosInner col-lg-6 col-md-5 col-sm-12 ">
-                        <img class="imgResponsive" src="img/trabajos-salvaje.png" alt="" title="trabajos Salvaje Bakery">
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <div class="trabajosInner itsAlive" data-itsAlive="move_up__opacity">
+                            <img class="imgResponsive imgSquare" src="img/trabajos-salvaje.png" alt="" title="trabajos Salvaje Bakery">
+                            <div class="trabajosInnerHidden">
+                                <div>
+                                    <h3>Salvaje Bakery</h3>
+                                    <p>Desarrollo Web y Merchandising</p>
+                                </div>
+                                <div class="trabajosBtnHiden">
+                                    <a target="_blank" href="https://salvajebakery.com.ar/" class="btn btnPrimary">Ver Web</a>
+                                    <a target="_blank" href="https://www.behance.net/gallery/92123417/Salvaje-Bakery-Web-Design" class="btn btnPrimary">Ir a Behance</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="trabajosInner col-lg-6 col-md-5 col-sm-12">
-                        <img class="imgResponsive" src="img/trabajos-mgar.png" alt="" title="trabajos MGAR">
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <div class="trabajosInner itsAlive" data-itsAlive="move_up__opacity">
+                            <img class="imgResponsive imgSquare" src="img/trabajos-mgar.png" alt="" title="trabajos MGAR">
+                            <div class="trabajosInnerHidden">
+                                <div>
+                                    <h3>MGAR</h3>
+                                    <p>Branding y Desarrollo Web</p>
+                                </div>
+                                <div class="trabajosBtnHiden">
+                                    <a target="_blank" href="http://mgar.com.ar/" class="btn btnPrimary">Ver Web</a>
+                                    <a target="_blank" href="https://www.behance.net/gallery/93005213/MGAR-Rebranding-Web-Desing" class="btn btnPrimary">Ir a Behance</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
-                    <div class="trabajosInner col-lg-6 col-md-5 col-sm-12">
-                        <img class="imgResponsive" src="img/trabajos-anuario.png" alt="" title="trabajos Anuario GCBA">
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <div class="trabajosInner itsAlive" data-itsAlive="move_up__opacity">
+                            <img class="imgResponsive imgSquare" src="img/trabajos-anuario.png" alt="" title="trabajos Anuario GCBA">
+                            <div class="trabajosInnerHidden">
+                                <div>
+                                    <h3>Anuario GCBA</h3>
+                                    <p>Desarrollo Web</p>
+                                </div>
+                                <div class="trabajosBtnHiden">
+                                    <a target="_blank" href="http://democraciaytransparenciacaba.info/" class="btn btnPrimary">Ver Web</a>
+                                    <a target="_blank" href="https://www.behance.net/gallery/93719559/Anuario-2018-Web-Desing" class="btn btnPrimary">Ir a Behance</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="trabajosInner col-lg-6 col-md-5 col-sm-12">
-                        <img class="imgResponsive" src="img/trabajos-redes.png" alt="" title="trabajos Redes GCBA">
+                    <div class="col-lg-5 col-md-6 col-sm-12">
+                        <div class="trabajosInner itsAlive" data-itsAlive="move_up__opacity">
+                            <img class="imgResponsive imgSquare" src="img/trabajos-redes.png" alt="" title="trabajos Redes GCBA">
+                            <div class="trabajosInnerHidden">
+                                <div>
+                                    <h3>Redes Social GCBA</h3>
+                                    <p>Gestión, creación de contenido y actualización de Redes Sociales</p>
+                                </div>
+                                <div class="trabajosBtnHiden">
+                                    <a target="_blank" href="https://www.facebook.com/MinisterioDeGobiernoBA" class="btn btnPrimary">Ver Facebook</a>
+                                    <a target="_blank" href="https://twitter.com/MinGobBA" class="btn btnPrimary">Ver Twitter</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                 </div>
+                <div class="trabajosBtn">
+                    <a href="mastrabajos.html" class="btn btnSecondary">Más trabajos</a>
+                </div>
+                
             </div>
     </section>
 
@@ -83,32 +152,32 @@
     <section id="servicios" class="servicios">
         <div class="container">
             <div class="row">
-                <div class="serviciosCards col-lg-4 col-md-6 col-sm-12">
+                <div class="serviciosCards col-lg-4 col-md-6 col-sm-12 itsAlive" data-itsAlive="opacity">
                     <img src="img/servicios-icon-01.svg" alt="" title="Servicios Icono">
                     <h3>Proyectamos</h3>
                     <p>Enfocándonos en las necesidades del usuario, pensamos soluciones innovadoras.</p>
                 </div>
-                <div class="serviciosCards col-lg-4 col-md-6 col-sm-12">
+                <div class="serviciosCards col-lg-4 col-md-6 col-sm-12 itsAlive" data-itsAlive="opacity">
                     <img src="img/servicios-icon-02.svg" alt="" title="Servicios Icono">
                     <h3>Branding</h3>
                     <p>Construimos la identidad visual de tu empresa de manera integral.</p>
                 </div>
-                <div class="serviciosCards col-lg-4 col-md-6 col-sm-12">
+                <div class="serviciosCards col-lg-4 col-md-6 col-sm-12 itsAlive" data-itsAlive="opacity">
                     <img src="img/servicios-icon-04.svg" alt="" title="Servicios Icono">
                     <h3>Web/Mobile/EComerce</h3>
                     <p>En función del modelo de negocio, desarrollamos la aplicación web ad-hoc con un diseño intuitivo y de fácil uso.</p>
                 </div>
-                <div class="serviciosCards col-lg-4 col-md-6 col-sm-12">
+                <div class="serviciosCards col-lg-4 col-md-6 col-sm-12 itsAlive" data-itsAlive="opacity">
                     <img src="img/servicios-icon-03.svg" alt="" title="Servicios Icono">
                     <h3>Responsive Desing</h3>
                     <p>Desarrollamos aplicaciones web flexibles y 100% adaptables a todos los dispositivos.</p>
                 </div>
-                <div class="serviciosCards col-lg-4 col-md-6 col-sm-12">
+                <div class="serviciosCards col-lg-4 col-md-6 col-sm-12 itsAlive" data-itsAlive="opacity">
                     <img src="img/servicios-icon-05.svg" alt="" title="Servicios Icono">
                     <h3>Social Media</h3>
                     <p>Incrementamos las interacciones en las Redes Sociales generando una estrategia de contenido</p>
                 </div>
-                <div class="serviciosCards col-lg-4 col-md-6 col-sm-12">
+                <div class="serviciosCards col-lg-4 col-md-6 col-sm-12 itsAlive" data-itsAlive="opacity">
                     <img src="img/servicios-icon-06.svg" alt="" title="Servicios Icono">
                     <h3>Fotografía/Video</h3>
                     <p>Producimos material audiovisual: fotografía de producto, videos promocionales, informativos e interactivos.</p>
@@ -120,7 +189,7 @@
     <!--footer-->
     <footer>
         <div class="container">
-            <div>
+            <div class="footerInfo">
                 <p>info@caracter.com.ar</p>
                 <p>Todos los derechos reservados</p>
             </div>
@@ -135,8 +204,8 @@
     
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
-    <script src="js/main.js"></script> -->
+    <!-- <script src="js/bootstrap.bundle.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="js/main.js"></script>  
 </body>
 </html>

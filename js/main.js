@@ -1,29 +1,51 @@
+(function($) {
 
+    /**
+     * Copyright 2012, Digital Fusion
+     * Licensed under the MIT license.
+     * http://teamdf.com/jquery-plugins/license/
+     *
+     * @author Sam Sehnert
+     * @desc A small plugin that checks whether elements are within
+     *     the user visible viewport of a web browser.
+     *     only accounts for vertical position, not horizontal.
+     */
 
-// Inline SVG insertado con AJAX
-/*
-const xhr = new XMLHttpRequest();
-const catSpace = document.getElementById('catSpace');
+    $.fn.visible = function(partial) {
+    
+        var $t            = $(this),
+            $w            = $(window),
+            viewTop       = $w.scrollTop(),
+            viewBottom    = viewTop + $w.height(),
+            _top          = $t.offset().top,
+            _bottom       = _top + $t.height(),
+            compareTop    = partial === true ? _bottom : _top,
+            compareBottom = partial === true ? _top : _bottom;
 
-xhr.onload = function() {
+        return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 
-    if (this.status === 200) {
-        catSpace.innerHTML = xhr.responseText;
+    };
+
+})(jQuery);
+
+$(window).scroll(function(event) {
+    
+    $(".itsAlive").each(function(i, el) {
+        var el = $(el);
+        if (el.visible(true)) {
+        el.addClass("fadeIn"); 
     } else {
-        console.warn('Did not recive 200 ok from the response!');
+        el.removeClass("fadeIn");
     }
-
-};
-
-xhr.open('get', '../img/cat-in-space.svg');
-xhr.send();
-
-*/
+    });
+    
+});
 
 
+/* CAT ANIMATION */
 
-$(function(){
-    var svgContainer = $("#catSpace");
+ $(function(){
+  var svgContainer = $("#catSpace");
     var svgUrl    = "img/cat-in-space.svg";
 
     $.get(svgUrl)
@@ -54,7 +76,6 @@ $(function(){
         // SOGA ANIMATION 
         TweenMax.to('#soga', 3, {
             delay: 0,
-            //y: "-=5px",
             scaleY: 0.96,
             yoyo:true,
             repeat:-1,
@@ -107,16 +128,17 @@ $(function(){
         TweenMax.set("#saturno-luna_2_", {
             rotation:0.01,
             z:0.01,
-            repeat:-1,
+            repeat:1,
             transformOrigin:"50% 50%"
         });
         TweenMax.to('#saturno-luna_2_', 100, {
             rotation:"+=360",
+            repeat:1,
         },0);
         
 
     };
     
     
-});
+}); 
 

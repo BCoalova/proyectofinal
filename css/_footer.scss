@@ -1,0 +1,28 @@
+/* ----FOOTER---- */
+footer {
+    color:$negro;
+    padding: 1rem 1.5rem;
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .footerInfo {
+        p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        li {
+            padding: 0 1rem;
+            margin-top: .5rem;
+            img {
+                width: 1.6rem;
+            }
+        }
+    }
+}

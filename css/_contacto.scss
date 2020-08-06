@@ -1,0 +1,45 @@
+/* ----CONTACTO---- */
+.contacto {
+    background-color: $azul;
+    color: $crema;
+    display: flex;
+    .row {
+        padding-top: 6.5rem;
+        min-height: calc(100vh - 5.136rem);
+        .formulario {
+            align-self: center;
+            form {
+                label {
+                    display: inline-block;
+                    margin-bottom: 1rem;
+                }
+                input[type="text"],
+                input[type="email"],
+                textarea {
+                    display: block;
+                    width:100%;
+                    margin-bottom: 1rem;
+                    background-color: transparent;
+                    border: .1rem solid $verde;
+                    outline: none;
+                    padding: .3rem;
+                    color:$crema;
+                    font-size: 1.4rem;
+                    &:focus {
+                        background-color: $verde;
+                    }
+                }
+                input[type="text"],
+                input[type="email"] {
+                    height: 2.6rem;
+                }
+            }
+        }
+        .catTakeOff {
+            align-self: flex-end;
+        }
+    }
+    label {
+        font-size: 1.6rem;
+    }
+}
