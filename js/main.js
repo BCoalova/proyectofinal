@@ -44,7 +44,7 @@ $(window).scroll(function(event) {
 
 /* CAT ANIMATION */
 
- $(function(){
+ /* $(function(){
   var svgContainer = $("#catSpace");
     var svgUrl    = "img/cat-in-space.svg";
 
@@ -142,3 +142,4 @@ $(window).scroll(function(event) {
     
 }); 
 
+ */

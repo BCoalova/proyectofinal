@@ -22,9 +22,29 @@ header {
                     padding: 1.5rem 1.8rem;
                     color: $negro;
                     text-transform: uppercase;
+                    transform: perspective(1px) translateZ(0);
+                    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                    position: relative;
+                    overflow: hidden;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        z-index: 10;
+                        left: 51%;
+                        right: 51%;
+                        bottom: 0;
+                        background: $negro;
+                        height: 3px;
+                        transition: all 0.5s ease-out;
+                    }
                     &:hover {
                         text-decoration: none;
                         color:$negro;
+                        background-color: transparent;
+                        &:before {
+                            left: 0;
+                            right: 0;
+                        }
                     }
                 }
             }

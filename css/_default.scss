@@ -128,7 +128,7 @@ a.btn, input.btn {
     &[data-itsAlive='move_up'] {
         transform: translate3d(0, 1rem, 0);
     }
-    &[data-itsAlive='move_up__opacity'] {
+    &[data-itsAlive='move_up-opacity'] {
         opacity: 0;
         transform: translate3d(0, 1rem, 0);
     }

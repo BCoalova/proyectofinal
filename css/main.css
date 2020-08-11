@@ -160,7 +160,7 @@ a.btn.btnSecondary:hover, input.btn.btnSecondary:hover {
           transform: translate3d(0, 1rem, 0);
 }
 
-.itsAlive[data-itsAlive='move_up__opacity'] {
+.itsAlive[data-itsAlive='move_up-opacity'] {
   opacity: 0;
   -webkit-transform: translate3d(0, 1rem, 0);
           transform: translate3d(0, 1rem, 0);
@@ -210,11 +210,36 @@ header nav ul.navbar-nav li.nav-item a.nav-link {
   padding: 1.5rem 1.8rem;
   color: #414042;
   text-transform: uppercase;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+header nav ul.navbar-nav li.nav-item a.nav-link:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #414042;
+  height: 3px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 header nav ul.navbar-nav li.nav-item a.nav-link:hover {
   text-decoration: none;
   color: #414042;
+  background-color: transparent;
+}
+
+header nav ul.navbar-nav li.nav-item a.nav-link:hover:before {
+  left: 0;
+  right: 0;
 }
 
 /* ----FOOTER---- */
@@ -507,7 +532,12 @@ footer ul li img {
           flex: 0 1 100%;
 }
 
-/* Más trabajos */
+/* 
+    Más trabajos
+    APLICACIÓN DE GRIDS
+    Galería de imágenes responsive
+    sin necesidad de @mediaqueries
+*/
 .masTrabajos {
   background-color: #FAF8EC;
   text-align: center;
@@ -833,7 +863,7 @@ footer ul li img {
             justify-content: flex-end;
   }
   header nav ul li:hover {
-    background-color: rgba(65, 64, 66, 0.2);
+    background-color: transparent;
   }
   /* ----HOME---- */
   .home .container {
