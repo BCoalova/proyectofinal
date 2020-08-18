@@ -161,7 +161,8 @@ $(function(){
 }); 
 
 /* 
-LOAD particleJs .json file
+OPCIONES DE particleJs 
+(ESTRELLAS EN MOVIMIENTO) 
 */
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load('particles-js', 'js/particles.json', function() {
