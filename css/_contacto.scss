@@ -4,7 +4,7 @@
     color: $crema;
     display: flex;
     .row {
-        padding-top: 6.5rem;
+        padding-top: $paddingTop;
         min-height: calc(100vh - 5.136rem);
         .formulario {
             align-self: center;

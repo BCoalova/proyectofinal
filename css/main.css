@@ -145,10 +145,10 @@ a.btn.btnSecondary:hover, input.btn.btnSecondary:hover {
 
 /* IT'S ALIVE Animations on scroll */
 .itsAlive {
-  -webkit-transition: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s, -webkit-transform 0.5s ease-in-out 0s;
-  transition: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s, -webkit-transform 0.5s ease-in-out 0s;
-  transition: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s, transform 0.5s ease-in-out 0s;
-  transition: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s, transform 0.5s ease-in-out 0s, -webkit-transform 0.5s ease-in-out 0s;
+  -webkit-transition: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s, -webkit-transform 0.5s ease-in-out 0s;
+  transition: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s, -webkit-transform 0.5s ease-in-out 0s;
+  transition: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s, transform 0.5s ease-in-out 0s;
+  transition: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s, transform 0.5s ease-in-out 0s, -webkit-transform 0.5s ease-in-out 0s;
 }
 
 .itsAlive[data-itsAlive='opacity'] {
@@ -312,6 +312,7 @@ footer ul li img {
 }
 
 .home .container .cta {
+  padding: 2rem 1.5rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -812,6 +813,9 @@ footer ul li img {
   /* HOME */
   .home .container {
     min-height: 100vh;
+  }
+  .home .container .cta {
+    padding: 0;
   }
   .home .container .cta .cta__title {
     font-size: 6.5rem;

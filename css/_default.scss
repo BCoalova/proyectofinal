@@ -133,7 +133,7 @@ a.btn, input.btn {
         transform: translate3d(0, 1rem, 0);
     }
     transition: 
-        opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) .5s,
+        opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) .3s,
         transform .5s ease-in-out 0s;
     &.fadeIn {
         opacity: 1;
