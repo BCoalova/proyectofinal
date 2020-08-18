@@ -1,3 +1,7 @@
+/* 
+AGREGANDO CLASE fadeIn 
+CUANDO EL ELEMENTO DE CLASE itsAlive ESTA EN EL VIEWPORT 
+*/
 (function($) {
 
     /**
@@ -41,11 +45,25 @@ $(window).scroll(function(event) {
     
 });
 
+/* 
+CERRANDO LA VENTANA MODAL 
+CUANDO SE CLIQUEA UN LINK 
+QUE NO RECARGA LA PÁGINA 
+*/
+$(function() {
+    $('.closemodal').click(function() {
+        $('#modalNavbar').modal('hide');
+    });
+});
 
-/* CAT ANIMATION */
 
- $(function(){
-  var svgContainer = $("#catSpace");
+
+/* 
+CAT ANIMATION 
+*/
+
+$(function(){
+    var svgContainer = $("#catSpace");
     var svgUrl    = "img/cat-in-space.svg";
 
     $.get(svgUrl)
@@ -141,4 +159,110 @@ $(window).scroll(function(event) {
     
     
 }); 
-
+/* 
+OPCIONES DE particleJs 
+(ESTRELLAS EN MOVIMIENTO) 
+*/
+particlesJS (
+    "particles-js", {
+        "particles":{
+            "number":{
+                "value":130,
+                "density":{
+                    "enable":true,
+                    "value_area":1025
+                }
+            },
+            "color":{
+                "value":"#ffffff"
+            },
+            "shape":{
+                "type":"circle","stroke":{
+                    "width":0,
+                    "color":"#000000"
+                },
+                "polygon":{
+                    "nb_sides":5
+                },
+                "image":{
+                    "src":"img/github.svg",
+                    "width":100,"height":100
+                }
+            },
+            "opacity":{
+                "value":1,
+                "random":true,
+                "anim":{
+                    "enable":true,
+                    "speed":1,
+                    "opacity_min":0,
+                    "sync":false
+                }
+            },
+            "size":{
+                "value":4,
+                "random":true,
+                "anim":{
+                    "enable":false,
+                    "speed":4,
+                    "size_min":0.3,
+                    "sync":false
+                }
+            },
+            "line_linked":{
+                "enable":false,
+            },
+            "move":{
+                "enable":true,
+                "speed":.3,
+                "direction":"none",
+                "random":true,
+                "straight":false,
+                "out_mode":"out",
+                "bounce":false,
+                "attract":{
+                    "enable":true,
+                    "rotateX":1815,
+                    "rotateY":600
+                }
+            }
+        },
+        "interactivity":{
+            "detect_on":"canvas",
+            "events":{
+                "onhover":{
+                    "enable":true,
+                    "mode":"bubble"
+                },
+                "onclick":{
+                    "enable":true,
+                    "mode":"repulse"
+                },"resize":true
+            },
+            "modes":{
+                "grab":{
+                    "enable":false,
+                    "line_linked":{
+                        "opacity":1
+                    }
+                },
+                "bubble":{
+                    "distance":275,
+                    "size":5,
+                    "duration":2,
+                    "opacity":0.8,
+                    "speed":3
+                },
+                "repulse":{
+                    "enable":false,
+                },
+                "push":{
+                    "particles_nb":4
+                },
+                "remove":{
+                    "particles_nb":2
+                }
+            }
+        },
+        "retina_detect":true
+    });

@@ -38,55 +38,64 @@
         <div class="container">
             <nav class="navbar navbar-expand-xl navbar-light">
                 <a class="logo" href="#home"><img src="img/logo-caracter.svg" alt="Logo Carácter"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#modalNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse navbar-collapse collapse" id="collapsibleNavbar">
+                <div class="navbar-collapse navbar-collapse collapse">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Trabajos
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#trabajos">Últimos Trabajos</a>
-                                <a class="dropdown-item" href="mastrabajos.html">Portfolio</a>
-                            </div>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#trabajos">Trabajos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Conocenos
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                <a class="dropdown-item" href="conocenos.html">Sobre nosotros</a>
-                                <a class="dropdown-item" href="equipo.html">Equipo</a>
-                            </div>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="mastrabajos.html">Porfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="conocenos.html">Sobre nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="equipo.html">Equipo</a></li>
                         <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
+    <div class="modal fade" id="modalNavbar" tabindex="-1" role="dialog" aria-labelledby="modalNavbar" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modalLogo">
+                        <a class="logo" href="#home"><img class="imgResponsive" src="img/logo-caracter.svg" alt="Logo Carácter"></a>
+                    </div> 
+                    <ul class="modalNav_link navbar-nav">
+                        <li class="nav-item"><a class="nav-link closemodal" href="#home">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link closemodal" href="#trabajos">Últimos Trabajos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mastrabajos.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link closemodal" href="#servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="conocenos.html">Sobre nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="equipo.html">Equipo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--seccion inicio-->
     <section id="home" class="home">
-            <div class="container">
-                <div class="row">
-                    <div class="cta col-md-5 col-sm-12">
-                        <h1 class="cta__title">Despegá tu Marca</h1>
-                        <p class="cta__paragraph">En <span>Carácter</span> creemos en la importancia de una buena estrategia de marca que logre alcanzar los diferentes objetivos de nuestros clientes.</p>
-                        <a class="btn btnPrimary" href="#trabajos">Empecemos</a>
-                    </div> 
-                    <div class="catSpace col-lg-6 col-md-6 col-sm-12" id="catSpace">
-                        <!-- <img class="imgResponsive" src="img/cat-in-space.svg" alt="" title="Gato en el espacio"> -->
-                    </div>
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="row">
+                <div class="cta col-md-5 col-sm-12">
+                    <h1 class="cta__title">Despegá tu Marca</h1>
+                    <p class="cta__paragraph">En <span>Carácter</span> creemos en la importancia de una buena estrategia de marca que logre alcanzar los diferentes objetivos de nuestros clientes.</p>
+                    <a class="btn btnPrimary" href="#trabajos">Empecemos</a>
+                </div> 
+                <div class="catSpace col-lg-6 col-md-6 col-sm-12" id="catSpace">
+                    <!-- <img class="imgResponsive" src="img/cat-in-space.svg" alt="" title="Gato en el espacio"> -->
                 </div>
             </div>
-            <div class="scrollDown">
-                <span></span>
-            </div>
+        </div>
+        <div class="scrollDown">
+            <span></span>
+        </div>
     </section>
     <!--seccion trabajos-->
     <section id="trabajos" class="trabajos">
@@ -154,12 +163,10 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
                 <div class="trabajosBtn">
                     <a href="mastrabajos.html" class="btn btnSecondary">Más trabajos</a>
                 </div>
-                
             </div>
     </section>
 
@@ -219,6 +226,7 @@
     <!-- JS -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script> 
     <script src="js/main.js"></script>  
 </body>

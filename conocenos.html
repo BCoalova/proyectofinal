@@ -37,11 +37,11 @@
         <div class="container">
             <nav class="navbar navbar-expand-xl navbar-light">
                 <a class="logo" href="index.html#home"><img src="img/logo-caracter.svg" alt="Logo Carácter"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#modalNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse navbar-collapse collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav" id="">
+                <div class="navbar-collapse navbar-collapse collapse">
+                    <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="index.html#home">Inicio</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -62,13 +62,35 @@
                                 <a class="dropdown-item" href="equipo.html">Equipo</a>
                             </div>
                         </li>
-                        
                         <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
+    <div class="modal fade" id="modalNavbar" tabindex="-1" role="dialog" aria-labelledby="modalNavbar" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modalLogo">
+                        <a class="logo" href="#home"><img class="imgResponsive" src="img/logo-caracter.svg" alt="Logo Carácter"></a>
+                    </div> 
+                    <ul class="modalNav_link navbar-nav">
+                        <li class="nav-item"><a class="nav-link closemodal" href="#home">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link closemodal" href="#trabajos">Últimos Trabajos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mastrabajos.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link closemodal" href="#servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="conocenos.html">Sobre nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="equipo.html">Equipo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="conocenos">
         <div class="container">
