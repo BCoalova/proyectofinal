@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* DEFAULT */
 * {
   margin: 0;
@@ -213,10 +212,16 @@ header nav ul.navbar-nav li.nav-item a.nav-link {
   text-transform: uppercase;
   -webkit-transform: perspective(1px) translateZ(0);
           transform: perspective(1px) translateZ(0);
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
           box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden;
+}
+
+header nav ul.navbar-nav li.nav-item a.nav-link.active {
+  background-color: rgba(178, 178, 178, 0.2);
 }
 
 header nav ul.navbar-nav li.nav-item a.nav-link:before {
@@ -226,7 +231,7 @@ header nav ul.navbar-nav li.nav-item a.nav-link:before {
   left: 51%;
   right: 51%;
   bottom: 0;
-  background: #414042;
+  background: #18A489;
   height: 3px;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
@@ -269,8 +274,9 @@ header nav ul.navbar-nav li.nav-item a.nav-link:hover:before {
 
 .modal .modal-dialog .modal-content .modal-body .close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 3rem;
 }
 
 .modal .modal-dialog .modal-content .modal-body .modalNav_link {
@@ -351,7 +357,7 @@ footer ul li img {
   background-image: url(../img/bg-home.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom left;
+  background-position: bottom right;
 }
 
 .home .container {
@@ -401,57 +407,6 @@ footer ul li img {
 
 .home .container .catSpace svg {
   width: 100%;
-}
-
-.home .scrollDown {
-  display: none;
-  position: absolute;
-  bottom: 4rem;
-  left: 50%;
-  -webkit-transform: translateX(-50%, -50%);
-          transform: translateX(-50%, -50%);
-}
-
-.home .scrollDown span:before {
-  content: '';
-  display: inline-block;
-  width: 1.45rem;
-  height: 1.45rem;
-  border-style: solid;
-  border-width: 0.5rem 0.5rem 0 0;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-  border-color: #18A489;
-}
-
-@-webkit-keyframes upAndDown {
-  0% {
-    -webkit-transform: translateY(1rem);
-            transform: translateY(1rem);
-  }
-  50% {
-    -webkit-transform: translateY(-1rem);
-            transform: translateY(-1rem);
-  }
-  100% {
-    -webkit-transform: translateY(1rem);
-            transform: translateY(1rem);
-  }
-}
-
-@keyframes upAndDown {
-  0% {
-    -webkit-transform: translateY(1rem);
-            transform: translateY(1rem);
-  }
-  50% {
-    -webkit-transform: translateY(-1rem);
-            transform: translateY(-1rem);
-  }
-  100% {
-    -webkit-transform: translateY(1rem);
-            transform: translateY(1rem);
-  }
 }
 
 /* ----TRABAJOS---- */
@@ -586,38 +541,6 @@ footer ul li img {
   opacity: 1;
 }
 
-.trabajos .trabajosBtn {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
-}
-
-/* 
-    Más trabajos
-    APLICACIÓN DE GRIDS
-    Galería de imágenes responsive
-    sin necesidad de @mediaqueries
-*/
-.masTrabajos {
-  background-color: #FAF8EC;
-  text-align: center;
-  min-height: 100vh;
-  padding-top: 6.5rem;
-  padding-bottom: 3.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.masTrabajos .container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(32.2rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(32.2rem, 1fr));
-  grid-gap: 1rem;
-  padding-top: 4rem;
-}
-
 /* ----SERVICIOS---- */
 .servicios {
   background-image: url(../img/background-2.png);
@@ -717,6 +640,16 @@ footer ul li img {
 
 .conocenos .conocenosCards .conocenosInner {
   padding: 1rem 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .conocenos .conocenosCards .conocenosInner img {
@@ -736,77 +669,8 @@ footer ul li img {
 }
 
 .conocenos .conocenosCards .conocenosInner a img {
-  width: 2.5rem;
+  width: 2.3rem;
   margin: 0 .8rem;
-}
-
-.conocenos .btnConocenos {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.conocenos .btnConocenos a.btn {
-  margin-top: 2.2rem;
-}
-
-/* EQUIPO */
-.equipo {
-  background-color: #FAF8EC;
-  text-align: center;
-  color: #414042;
-  padding-top: 10rem;
-  padding-bottom: 3rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
-.equipo .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-}
-
-.equipo .equipoInner {
-  margin-bottom: 1.6rem;
-}
-
-.equipo .equipoInner img {
-  margin-bottom: 1.6rem;
-  width: 25rem;
-}
-
-.equipo .equipoInner h3 {
-  margin-bottom: 1rem;
-}
-
-.equipo .equipoInner p {
-  margin-bottom: 1.6rem;
-}
-
-.equipo .equipoInner a {
-  display: inline-block;
-}
-
-.equipo .equipoInner a img {
-  width: 2.5rem;
-  margin: 0 .8rem;
-}
-
-.equipo a.btn {
-  margin-top: 2.2rem;
 }
 
 /* ----CONTACTO---- */
@@ -907,7 +771,7 @@ footer ul li img {
   }
   /* TRABAJOS */
   .trabajos {
-    min-height: 100vh;
+    min-height: calc(100vh - 5.136rem);
   }
   .trabajos .trabajosInner .trabajosInnerHidden {
     padding: 2.6rem 2.6rem;
@@ -929,6 +793,9 @@ footer ul li img {
     background-color: transparent;
   }
   /* ----HOME---- */
+  .home #particle-js {
+    background-position: bottom left;
+  }
   .home .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -940,12 +807,15 @@ footer ul li img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 5.136rem);
     /* .cta {
                 padding-right: 18rem; 
             } */
   }
   /* TRABAJOS */
+  .trabajos {
+    padding-bottom: 0;
+  }
   .trabajos .trabajosInner .trabajosInnerHidden {
     padding: 5rem 3.6rem;
   }

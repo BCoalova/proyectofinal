@@ -46,19 +46,6 @@ $(window).scroll(function(event) {
 });
 
 /* 
-CERRANDO LA VENTANA MODAL 
-CUANDO SE CLIQUEA UN LINK 
-QUE NO RECARGA LA PÁGINA 
-*/
-$(function() {
-    $('.closemodal').click(function() {
-        $('#modalNavbar').modal('hide');
-    });
-});
-
-
-
-/* 
 CAT ANIMATION 
 */
 
