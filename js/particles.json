@@ -11,9 +11,10 @@
             "value":"#ffffff"
         },
         "shape":{
-            "type":"circle","stroke":{
+            "type":"circle",
+            "stroke":{
                 "width":0,
-                "color":"#000000"
+                "color":"#fffff"
             },
             "polygon":{
                 "nb_sides":5
@@ -55,14 +56,14 @@
             "out_mode":"out",
             "bounce":false,
             "attract":{
-                "enable":true,
+                "enable":false,
                 "rotateX":1815,
                 "rotateY":600
             }
         }
     },
     "interactivity":{
-        "detect_on":"canvas",
+        "detect_on":["canvas", "windows"],
         "events":{
             "onhover":{
                 "enable":true,
