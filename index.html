@@ -37,7 +37,7 @@
     <header>
         <div class="container">
             <nav class="navbar navbar-expand-xl navbar-light">
-                <a class="logo" href="index.html#home"><img src="img/logo-caracter.svg" alt="Logo Carácter"></a>
+                <a class="logo" href="index.html"><img src="img/logo-caracter.svg" alt="Logo Carácter"></a>
                 <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#modalNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -61,7 +61,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <div class="modalLogo">
-                        <a class="logo" href="index.html#home"><img class="imgResponsive" src="img/logo-caracter.svg" alt="Logo Carácter"></a>
+                        <a class="logo" href="index.html"><img class="imgResponsive" src="img/logo-caracter.svg" alt="Logo Carácter"></a>
                     </div> 
                     <ul class="modalNav_link navbar-nav">
                         <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
@@ -86,12 +86,15 @@
                     <a class="btn btnPrimary" href="servicios.html">Empecemos</a>
                 </div> 
                 <div class="catSpace col-lg-6 col-md-6 col-sm-12" id="catSpace">
-                    <!-- <img class="imgResponsive" src="img/cat-in-space.svg" alt="" title="Gato en el espacio"> -->
+                    <!-- 
+                        Usando jquery y AJAX se inserta directamente el markup del svg para poder controlar las diferentes partes con GSAP 
+                        <img class="imgResponsive" src="img/cat-in-space.svg" alt="" title="Gato en el espacio"> 
+                    -->
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!--footer-->
     <footer>
         <div class="container">

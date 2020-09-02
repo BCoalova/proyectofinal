@@ -19,7 +19,7 @@ header {
             font-size: 1.8rem;
             li.nav-item {
                 a.nav-link {
-                    padding: 1.5rem 1.8rem;
+                    padding: 2.2rem 1.8rem;
                     color: $negro;
                     text-transform: uppercase;
                     transform: perspective(1px) translateZ(0);
@@ -72,6 +72,11 @@ header {
                     top: 1.5rem;
                     right: 1.5rem;
                     font-size: 3rem;
+                }
+                .modalLogo {
+                    img {
+                        max-width: 300px;
+                    }
                 }
                 .modalNav_link {
                     display: flex;

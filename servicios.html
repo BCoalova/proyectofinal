@@ -37,7 +37,7 @@
     <header>
         <div class="container">
             <nav class="navbar navbar-expand-xl navbar-light">
-                <a class="logo" href="index.html#home"><img src="img/logo-caracter.svg" alt="Logo Carácter"></a>
+                <a class="logo" href="index.html"><img src="img/logo-caracter.svg" alt="Logo Carácter"></a>
                 <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#modalNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -61,7 +61,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <div class="modalLogo">
-                        <a class="logo" href="index.html#home"><img class="imgResponsive" src="img/logo-caracter.svg" alt="Logo Carácter"></a>
+                        <a class="logo" href="index.html"><img src="img/logo-caracter.svg" alt="Logo Carácter"></a>
                     </div> 
                     <ul class="modalNav_link navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
@@ -74,8 +74,16 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+    </div>
+
     <!--seccion servicios-->
     <section id="servicios" class="servicios">
+        <div id="particles-js"></div>
         <div class="container">
             <div class="row">
                 <div class="serviciosCards col-lg-4 col-md-6 col-sm-12">
@@ -95,7 +103,7 @@
                 </div>
                 <div class="serviciosCards col-lg-4 col-md-6 col-sm-12">
                     <img src="img/servicios-icon-03.svg" alt="" title="Servicios Icono">
-                    <h3>Responsive Desing</h3>
+                    <h3>Responsive Design</h3>
                     <p>Desarrollamos aplicaciones web flexibles y 100% adaptables a todos los dispositivos.</p>
                 </div>
                 <div class="serviciosCards col-lg-4 col-md-6 col-sm-12">
@@ -107,6 +115,38 @@
                     <img src="img/servicios-icon-06.svg" alt="" title="Servicios Icono">
                     <h3>Fotografía/Video</h3>
                     <p>Producimos material audiovisual: fotografía de producto, videos promocionales, informativos e interactivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="promo">
+        <div class="container">
+            <div class="row">
+                <div class="promo__cta col-md-8 col-lg-4">
+                    <h2>¿Todavía no contás con Presencia Digital?</h2>
+                    <p>Consultanos por el Paquete de Bautismo Digital para tu Marca.</p>
+                    <a href="contacto.html" class="btn btnSecondary">¡Quiero!</a>
+                </div>
+                <div class="promo__iconEye col-md-3">
+                    <img src="img/icon-eye.svg" alt="">
+                </div>
+                <div class="promo__paquete col-md-12 col-lg-4 col-xl-3">
+                    <div class="promo__paquete__item">
+                        <p>Rediseño de marca</p>
+                        <img src="img/cheque.svg" alt="" class="check">
+                    </div>
+                    <div class="promo__paquete__item">
+                        <p>Tienda Nube (Plan full)</p>
+                        <img src="img/cheque.svg" alt="" class="check">
+                    </div>
+                    <div class="promo__paquete__item">
+                        <p>Social Media (FB - IG)</p>
+                        <img src="img/cheque.svg" alt="" class="check">
+                    </div>
+                    <div class="promo__paquete__item">
+                        <p>14 piezas de contenido</p>
+                        <img src="img/cheque.svg" alt="" class="check">
+                    </div>
                 </div>
             </div>
         </div>
@@ -127,7 +167,8 @@
     <!-- JS -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>-->
-    <script src="js/main.js"></script> 
+    <script src="js/particles.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script> -->
+    <script src="js/main.js"></script>
 </body>
 </html>

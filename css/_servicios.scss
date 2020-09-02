@@ -1,12 +1,13 @@
 /* ----SERVICIOS---- */
 .servicios {
-    background-image: url(../img/background-2.png);
+    background-color: $azul;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     color: $crema;
     align-items: center;
     display: flex;
+    position: relative;
     .container {
         padding-top: $paddingTop;
         padding-bottom: 6.5rem;
@@ -24,6 +25,52 @@
         }
         p {
             margin-bottom: 1.6rem;
+        }
+    }
+}
+.promo {
+    background-color: $verde;
+    color:$crema;
+    padding: 5.6rem 0;
+    .row {
+        align-items: center;
+        justify-content: space-between;
+    }
+    .promo__cta {
+        h2 {
+            font-size: 2.8rem ;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 1.6rem;
+        }
+    }
+    .promo__iconEye {
+        display: flex;
+        justify-content: center;
+        img {
+            max-width: 40rem;
+        }
+    }
+    .promo__paquete {
+        display: flex;
+        flex-flow: wrap column;
+        align-items: center;
+        margin-top: 3.2rem ;
+        padding: 2rem 2rem;
+        border: $crema 1px solid;
+        border-radius: .6rem;
+        .promo__paquete__item {
+            margin-bottom: 1.2rem;
+            img {
+                display: inline-block;
+                width: 1.5rem;
+                margin-left: .3rem;
+            }
+            p {
+                display: inline-block;
+            }
         }
     }
 }

@@ -49,6 +49,11 @@
             animation: upAndDown 2s ease-in-out infinite;
         }
     }
+    .promo {
+        .promo__paquete {
+            align-items: flex-end;
+        }
+    }
 
     /* TRABAJOS */
     .trabajos {
@@ -95,7 +100,7 @@
             flex-flow: row wrap;
             justify-content: space-evenly;
             align-items: center;
-            min-height: calc(100vh - 5.136rem);
+            min-height:calc(100vh - 5.13rem) ;
             /* .cta {
                 padding-right: 18rem; 
             } */
@@ -117,7 +122,7 @@
 
     /* SERVICIOS */
     .servicios {
-        min-height: calc(100vh - 5.136rem);
+        min-height: 100vh;
         .serviciosCards {
             padding:2.5rem 5rem;
         }
@@ -135,11 +140,5 @@
                 }
             }
         }
-    }
-
-    /* EQUIPO */ 
-    .equipo {
-        min-height: calc(100vh - 5.136rem);
-        max-height: auto;
     }
 }

@@ -1,5 +1,7 @@
 /* DEFAULT */
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -72,6 +74,7 @@ img.imgResponsive,
 .bootstrapOverwrites p {
   font-size: 1.6rem;
   letter-spacing: .2rem;
+  margin: 0;
 }
 
 .bootstrapOverwrites .col, .bootstrapOverwrites .col-1, .bootstrapOverwrites .col-10, .bootstrapOverwrites .col-11, .bootstrapOverwrites .col-12, .bootstrapOverwrites .col-2, .bootstrapOverwrites .col-3, .bootstrapOverwrites .col-4, .bootstrapOverwrites .col-5, .bootstrapOverwrites .col-6, .bootstrapOverwrites .col-7, .bootstrapOverwrites .col-8, .bootstrapOverwrites .col-9, .bootstrapOverwrites .col-auto, .bootstrapOverwrites .col-lg, .bootstrapOverwrites .col-lg-1, .bootstrapOverwrites .col-lg-10, .bootstrapOverwrites .col-lg-11, .bootstrapOverwrites .col-lg-12, .bootstrapOverwrites .col-lg-2, .bootstrapOverwrites .col-lg-3, .bootstrapOverwrites .col-lg-4, .bootstrapOverwrites .col-lg-5, .bootstrapOverwrites .col-lg-6, .bootstrapOverwrites .col-lg-7, .bootstrapOverwrites .col-lg-8, .bootstrapOverwrites .col-lg-9, .bootstrapOverwrites .col-lg-auto, .bootstrapOverwrites .col-md, .bootstrapOverwrites .col-md-1, .bootstrapOverwrites .col-md-10, .bootstrapOverwrites .col-md-11, .bootstrapOverwrites .col-md-12, .bootstrapOverwrites .col-md-2, .bootstrapOverwrites .col-md-3, .bootstrapOverwrites .col-md-4, .bootstrapOverwrites .col-md-5, .bootstrapOverwrites .col-md-6, .bootstrapOverwrites .col-md-7, .bootstrapOverwrites .col-md-8, .bootstrapOverwrites .col-md-9, .bootstrapOverwrites .col-md-auto, .bootstrapOverwrites .col-sm, .bootstrapOverwrites .col-sm-1, .bootstrapOverwrites .col-sm-10, .bootstrapOverwrites .col-sm-11, .bootstrapOverwrites .col-sm-12, .bootstrapOverwrites .col-sm-2, .bootstrapOverwrites .col-sm-3, .bootstrapOverwrites .col-sm-4, .bootstrapOverwrites .col-sm-5, .bootstrapOverwrites .col-sm-6, .bootstrapOverwrites .col-sm-7, .bootstrapOverwrites .col-sm-8, .bootstrapOverwrites .col-sm-9, .bootstrapOverwrites .col-sm-auto, .bootstrapOverwrites .col-xl, .bootstrapOverwrites .col-xl-1, .bootstrapOverwrites .col-xl-10, .bootstrapOverwrites .col-xl-11, .bootstrapOverwrites .col-xl-12, .bootstrapOverwrites .col-xl-2, .bootstrapOverwrites .col-xl-3, .bootstrapOverwrites .col-xl-4, .bootstrapOverwrites .col-xl-5, .bootstrapOverwrites .col-xl-6, .bootstrapOverwrites .col-xl-7, .bootstrapOverwrites .col-xl-8, .bootstrapOverwrites .col-xl-9, .bootstrapOverwrites .col-xl-auto {
@@ -102,6 +105,11 @@ img.imgResponsive,
 
 .bootstrapOverwrites .dropdown-item:hover {
   background-color: rgba(65, 64, 66, 0.2);
+}
+
+.bootstrapOverwrites .modal-dialog {
+  width: 100%;
+  min-width: 100%;
 }
 
 /* BOTONES */
@@ -143,33 +151,17 @@ a.btn.btnSecondary:hover, input.btn.btnSecondary:hover {
   color: #FAF8EC;
 }
 
-/* IT'S ALIVE Animations on scroll */
-.itsAlive {
-  -webkit-transition: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s, -webkit-transform 0.5s ease-in-out 0s;
-  transition: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s, -webkit-transform 0.5s ease-in-out 0s;
-  transition: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s, transform 0.5s ease-in-out 0s;
-  transition: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s, transform 0.5s ease-in-out 0s, -webkit-transform 0.5s ease-in-out 0s;
-}
-
-.itsAlive[data-itsAlive='opacity'] {
-  opacity: 0;
-}
-
-.itsAlive[data-itsAlive='move_up'] {
-  -webkit-transform: translate3d(0, 1rem, 0);
-          transform: translate3d(0, 1rem, 0);
-}
-
-.itsAlive[data-itsAlive='move_up-opacity'] {
-  opacity: 0;
-  -webkit-transform: translate3d(0, 1rem, 0);
-          transform: translate3d(0, 1rem, 0);
-}
-
-.itsAlive.fadeIn {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 5.136rem;
+  width: 100%;
+  min-height: calc(100vh - 5.136rem);
+  background-image: url(../img/bg-home.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
 }
 
 /* ----NAVBAR---- */
@@ -207,7 +199,7 @@ header nav ul.navbar-nav {
 }
 
 header nav ul.navbar-nav li.nav-item a.nav-link {
-  padding: 1.5rem 1.8rem;
+  padding: 2.2rem 1.8rem;
   color: #414042;
   text-transform: uppercase;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -279,6 +271,10 @@ header nav ul.navbar-nav li.nav-item a.nav-link:hover:before {
   font-size: 3rem;
 }
 
+.modal .modal-dialog .modal-content .modal-body .modalLogo img {
+  max-width: 300px;
+}
+
 .modal .modal-dialog .modal-content .modal-body .modalNav_link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,6 +296,7 @@ header nav ul.navbar-nav li.nav-item a.nav-link:hover:before {
 
 /* ----FOOTER---- */
 footer {
+  background-color: white;
   color: #414042;
   padding: 1rem 1.5rem;
 }
@@ -344,24 +341,11 @@ footer ul li img {
 
 /* ----HOME---- */
 .home {
-  position: relative;
-}
-
-.home #particles-js {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
   background-color: #082D4B;
-  background-image: url(../img/bg-home.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom right;
 }
 
 .home .container {
-  padding-top: 6.5rem;
+  padding-top: 7.1rem;
   padding-bottom: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -413,7 +397,7 @@ footer ul li img {
 .trabajos {
   background-color: #FAF8EC;
   text-align: center;
-  padding-top: 6.5rem;
+  padding-top: 7.1rem;
   padding-bottom: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -543,7 +527,7 @@ footer ul li img {
 
 /* ----SERVICIOS---- */
 .servicios {
-  background-image: url(../img/background-2.png);
+  background-color: #082D4B;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -554,10 +538,11 @@ footer ul li img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .servicios .container {
-  padding-top: 6.5rem;
+  padding-top: 7.1rem;
   padding-bottom: 6.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -585,12 +570,81 @@ footer ul li img {
   margin-bottom: 1.6rem;
 }
 
+.promo {
+  background-color: #18A489;
+  color: #FAF8EC;
+  padding: 5.6rem 0;
+}
+
+.promo .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.promo .promo__cta h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.promo .promo__cta p {
+  margin-bottom: 1.6rem;
+}
+
+.promo .promo__iconEye {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.promo .promo__iconEye img {
+  max-width: 40rem;
+}
+
+.promo .promo__paquete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3.2rem;
+  padding: 2rem 2rem;
+  border: #FAF8EC 1px solid;
+  border-radius: .6rem;
+}
+
+.promo .promo__paquete .promo__paquete__item {
+  margin-bottom: 1.2rem;
+}
+
+.promo .promo__paquete .promo__paquete__item img {
+  display: inline-block;
+  width: 1.5rem;
+  margin-left: .3rem;
+}
+
+.promo .promo__paquete .promo__paquete__item p {
+  display: inline-block;
+}
+
 /* ----CONOCENOS---- */
 .conocenos {
   background-color: #FAF8EC;
   text-align: center;
   color: #414042;
-  padding-top: 6.5rem;
+  padding-top: 7.1rem;
   padding-bottom: 3.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -660,7 +714,7 @@ footer ul li img {
   margin-bottom: 1rem;
 }
 
-.conocenos .conocenosCards .conocenosInner p {
+.conocenos .conocenosCards .conocenosInner p:nth-child(4) {
   margin-bottom: 1.6rem;
 }
 
@@ -683,7 +737,7 @@ footer ul li img {
 }
 
 .contacto .row {
-  padding-top: 6.5rem;
+  padding-top: 7.1rem;
   min-height: calc(100vh - 5.136rem);
 }
 
@@ -769,6 +823,11 @@ footer ul li img {
     -webkit-animation: upAndDown 2s ease-in-out infinite;
             animation: upAndDown 2s ease-in-out infinite;
   }
+  .promo .promo__paquete {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
   /* TRABAJOS */
   .trabajos {
     min-height: calc(100vh - 5.136rem);
@@ -807,7 +866,7 @@ footer ul li img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    min-height: calc(100vh - 5.136rem);
+    min-height: calc(100vh - 5.13rem);
     /* .cta {
                 padding-right: 18rem; 
             } */
@@ -824,7 +883,7 @@ footer ul li img {
   }
   /* SERVICIOS */
   .servicios {
-    min-height: calc(100vh - 5.136rem);
+    min-height: 100vh;
   }
   .servicios .serviciosCards {
     padding: 2.5rem 5rem;
@@ -839,11 +898,6 @@ footer ul li img {
   }
   .conocenos .conocenosCards .conocenosSomos h1 {
     font-size: 6.5rem;
-  }
-  /* EQUIPO */
-  .equipo {
-    min-height: calc(100vh - 5.136rem);
-    max-height: auto;
   }
 }
 /*# sourceMappingURL=main.css.map */
